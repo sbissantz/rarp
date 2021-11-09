@@ -1,8 +1,12 @@
 # Using git and Github
 
+This script is just another how-to for git and Github. First, make sure you
+installed git and Github (either manually or using brew).  If so, we can set up
+your user.
+
 ## Git
 
-## Define global user
+## Set up the global user 
 
 ```
 git config --global user.name "foo bar"
