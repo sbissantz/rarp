@@ -15,7 +15,7 @@ let's call him Robert.
 
 Ah, before we get going with Robert -- the tiny bright white shining thing on
 the left is your prompt. Mine looks like this `steven@taure ~ %`. The default
-convention is often `username@hostname`. But you can change that (temporarily)
+convention is often `user@host`. But you can change that (temporarily)
 easily (`export $PS1=Robert`).  Anyway, the prompt indicates that Robert is
 ready to serve. If there is no prompt, you cannot commission Robert to do
 stuff.  It is as simple as that. For example, paste `echo "Not available";
