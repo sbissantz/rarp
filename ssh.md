@@ -56,6 +56,10 @@ ssh-keygen -t rsa
 ```
 ---
 
+Note: Executing the command will suggest a directory; something like
+`User/.../.ssh/...`.  We will accept Roberts offer. To confirm just type
+<Enter>. 
+
 ## Accessibility 
 
 Now your machine is ready to roll. If you want to copy your public key on a
@@ -79,3 +83,4 @@ ssh-agent /bin/zsh
 ssh-add ~/.ssh/id_rsa
 ```
 ---
+
