@@ -116,7 +116,13 @@ and add:
 This seems useful as it persist your password between sessions/restarts of your
 box. See Cris' answer
 [here](https://superuser.com/questions/88470/how-to-use-mac-os-x-keychain-with-ssh-keys)
-for more details.
+for more details. Note that it might seem sufficient to just add `ÙseKeychain
+yes` to your `.ssh/config.` as Ben noted
+[here](https://superuser.com/questions/88470/how-to-use-mac-os-x-keychain-with-ssh-keys).
+If you haven't done it already, it is as simple as:
 
+```
+touch .ssh/config ; echo "UseKeychain yes" >> ~/.ssh/config
+```
 ---
 
