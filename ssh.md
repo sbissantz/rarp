@@ -96,12 +96,20 @@ Another key? Well, specify its location using the following snippet:
 ssh-add --apple-use-keychain /path/to/private/key/file
 ```
 
+You might also consider:
+
+```
+ssh-add --apple-load-keychain
+```
+
+...to add identities to the agent using any passphrase stored in the user's
+keychain. Besides suggests to create a `~~/.ssh/config` file and add:
+
+```
  Host *
    UseKeychain yes
    AddKeysToAgent yes
    IdentityFile ~/.ssh/id_rsa
-
-
-
+```
 ---
 
