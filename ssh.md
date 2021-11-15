@@ -103,7 +103,8 @@ ssh-add --apple-load-keychain
 ```
 
 ...to add identities to the agent using any passphrase stored in the user's
-keychain. Besides suggests to create a `~~/.ssh/config` file and add:
+keychain. Besides, you might also consider to create a `~~/.ssh/config` file
+and add:
 
 ```
  Host *
@@ -111,5 +112,11 @@ keychain. Besides suggests to create a `~~/.ssh/config` file and add:
    AddKeysToAgent yes
    IdentityFile ~/.ssh/id_rsa
 ```
+
+This seems useful as it persist your password between sessions/restarts of your
+box. See Cris' answer
+[here](https://superuser.com/questions/88470/how-to-use-mac-os-x-keychain-with-ssh-keys)
+for more details.
+
 ---
 
