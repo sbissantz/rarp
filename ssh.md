@@ -82,5 +82,26 @@ which $SHELL
 ssh-agent /bin/zsh
 ssh-add ~/.ssh/id_rsa
 ```
+ 
+Note: In macOS there is a very elegant way to setup and store the standard key
+in your keychain. Just type:
+
+```
+ssh-add --apple-use-keychain
+```
+
+Another key? Well, specify its location using the following snippet:
+
+```
+ssh-add --apple-use-keychain /path/to/private/key/file
+```
+
+ Host *
+   UseKeychain yes
+   AddKeysToAgent yes
+   IdentityFile ~/.ssh/id_rsa
+
+
+
 ---
 
