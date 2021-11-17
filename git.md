@@ -81,3 +81,70 @@ Yaaay! Success. Time to party!
 Hi sbissantz! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 ---
+
+## Using git and GitHub
+
+Please note --right off the start-- the following introduction is a shorty.
+It won't tackle the topic with full strength. Instead, the tutorial presents
+git in a nutshell. You should be able to jump right off the ground. Nothing
+more than that! Alright, so let's get started.
+
+
+To control your revisions, you need something substantial. Let's say a
+directory. Because we are reborn nerds, we use the terminal. Hands off the
+mouse folks! Press <command> and <space> and type "terminal". Then type:
+
+```
+mkdir -p test_dir ; cd test_dir
+```
+
+The snippet creates a directory (`mkdir`) and made it your current working
+directory (`cd`).  Double-check with `pwd` which is the instruction to print
+working directory. The command should spit out something like
+`Users/username/test_dir`.
+
+```
+pwd
+```
+
+Now it's time to create a repository.  You can talk to Robert (your computer
+servant) very definitely: 'Robert, use git to initialize a repository' becomes:
+
+```
+git init
+```
+
+If Robert mentions something like `Initialized empty Git repository in
+/Users/<username>/test_dir/.git/` you are good to go.
+
+---
+
+[...in progress]
+
+Now let's create a bunch of files. 'touch' is your friend. Equipping him with
+brace expansion characters allows him to multiplicate the result. So we get
+nine test files.
+
+```
+touch test_{1..9}
+```
+
+´```
+echo "I am a test" >> test{1..9}"
+```
+
+```
+cat "I am a test" >> test{1..9}"
+```
+
+
+
+
+
+
+
+
+
+
+
+
