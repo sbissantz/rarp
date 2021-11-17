@@ -1,10 +1,10 @@
 # SSH (good practice)
-[https://upcloud.com/community/tutorials/use-ssh-keys-authentication/]
+
 ---
 
-It is part of good praxtice to use SSH. That's why we set up SSH in this
-manual. First and foremost, this implied to set up a SSH key. But before
-jumping right into practice, let me motivate its use a bit.
+It is part of good practice to use SSH. That's why we set up SSH here. First
+and foremost, this implies to set up a SSH key. But before jumping right into
+practice, let me motivate its use a bit more.
 
 SSH is an abbreviation for Secure (Socket) Shell. The concept is built upon a
 pre-specified ethic (the ssh protocol), clarifying how interactions between
@@ -19,9 +19,9 @@ contacts (the client's known hosts file). After some text messages, they
 negotiate where and when to meet (the parameters of connection). After a couple
 of dates, they live happily ever after (connection: established).
 
-Obviously, the story is weird. And yes, probably it's less romanti. But common.
-You should understand the concept. I hope the story contributed to this
-goal (somehow). So let's rock.
+Obviously, the story is weird. And yes, probably it's less romantic. But
+common.  You should understand the concept. I hope the story contributed to
+this goal (somehow). So let's rock.
 
 ## Prologue 
 
@@ -36,9 +36,9 @@ ls -ld ~/.ssh
 ## A safe place 
 
 If you don't have key already, it's time to set things up. We first create a
-`.ssh`directory in your homefolder. Then we make sure that only *you* can
-access those files. Finally, we check the file ownership to asure everything is
-set up correctly.
+`.ssh`directory in your home folder. Then we make sure that only *you* can
+access those files. Finally, we check the file ownership to ensure everything
+is set up correctly.
 
 ```
 mkdir -p ~/.ssh ; chmod 700 ~/.ssh ; ls -ld ~/.ssh
@@ -63,7 +63,7 @@ Note: Executing the command will suggest a directory; something like
 ## Accessibility 
 
 Now your machine is ready to roll. If you want to copy your public key on a
-server or third party instance (e.g. Github) you can copy it with one of the
+server or third party instance (e.g. GitHub) you can copy it with one of the
 following commands.
 
 ```
