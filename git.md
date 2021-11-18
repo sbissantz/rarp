@@ -142,20 +142,20 @@ touch test_{1..9}
 Boom! No sooner said than done. But look; all those files are empty: 
 
 ```
-cat "I am a test" >> test{1..9}"
+cat test_{1..9}"
 ```
 
 To track changes, we need to produce content. But you don't want to manually
 edit each of the nine files, right? Robert will help: 
 
 ```
-echo "I am a test" >> test{1..9}"
+echo "I am a test" >> test_{1..9}"
 ```
 
 To prove Robert kept his word, click the up arrow two times or type:
 
 ```
-cat "I am a test" >> test{1..9}"
+cat test_{1..9}"
 ```
 
 
