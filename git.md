@@ -142,7 +142,7 @@ touch test_{1..9}
 Boom! No sooner said than done. But look; all those files are empty: 
 
 ```
-cat test_{1..9}"
+cat test_{1..9}
 ```
 
 To track changes, we need to produce content. But you don't want to manually
@@ -155,7 +155,7 @@ echo "I am a test" >> test_{1..9}"
 To prove Robert kept his word, click the up arrow two times or type:
 
 ```
-cat test_{1..9}"
+cat test_{1..9}
 ```
 
 
