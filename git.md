@@ -145,14 +145,16 @@ Boom! No sooner said than done. But look; all those files are empty:
 cat test_{1..9}
 ```
 
-To track changes, we need to produce content. But you don't want to manually
-edit each of the nine files, right? Robert will help: 
+To track changes, we need to produce content. But you don't want to edit each
+of the nine files manually, right? Robert is loyal. He will help. If you ask
+him to write (`echo`) a few words (`"I am a test"`) in all those files
+(`test_{1..9}`) he will certainly lend you a hand.
 
 ```
 echo "I am a test" >> test_{1..9}"
 ```
 
-To prove Robert kept his word, click the up arrow two times or type:
+To prove that Robert kept his word, click the up arrow two times or type:
 
 ```
 cat test_{1..9}
