@@ -148,7 +148,7 @@ cat test_{1..9}
 To track changes, we need to produce content. But you don't want to edit each
 of the nine files manually, right? Robert is loyal. He will help. If you ask
 him to write (`echo`) a few words (`"I am a test"`) in all those files
-(`test_{1..9}`) he will certainly lend you a hand.
+(`test_{1..9}`), he will certainly lend you a hand with it.
 
 ```
 echo "I am a test" >> test_{1..9}"
@@ -160,6 +160,30 @@ To prove that Robert kept his word, click the up arrow two times or type:
 cat test_{1..9}
 ```
 
+All right, now its time to commit your initial changes to all those files and
+push them to GitHub.
+
+```
+git commit -m "Initial commit"
+```
+
+Usually, you should be a bit more precise when documenting your changes! But
+for the sake of understanding the Git way of doing things, the snippet
+suffices. If you want to nuancly pin down all the new cool features you've
+implemented, make sure to restrict yourself to 80 characters and type `git
+commit`. `git commit` will start your previously defined editor (nvim, emacs,
+atom,...). Why 80 characters?  Well, 80 is arbitrary. But it is a good rule of
+thumb: If you cannot outline the changes you made within 80 characters, you
+probably changed too much. Get used to committing smaller junks of code more
+often. The tip might prevent you from some ugly merging conflicts and
+contributes to a harmonic multi user workflow on large, difficult projects.
+
+
+All right, time to push!
+
+
+
+Oh no! We forgot to set up a remote repository. 
 
 
 
