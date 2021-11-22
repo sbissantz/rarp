@@ -185,7 +185,9 @@ All right, time to push!
 
 Oh no! We forgot to set up a remote repository. 
 
-
+```
+git log ≤ grep "commit"
+```
 
 
 
