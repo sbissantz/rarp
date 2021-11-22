@@ -185,17 +185,15 @@ All right, time to push!
 
 Oh no! We forgot to set up a remote repository. 
 
-
-
-
 ```
 git log | grep "commit"
 ```
 
 You only need the first 10 characters of the hash tag to refer to this commit.
 
-
-
+```
+git config format.pretty oneline
+```
 
 
 
