@@ -195,6 +195,17 @@ You only need the first 10 characters of the hash tag to refer to this commit.
 git config format.pretty oneline
 ```
 
+```
+git add -i
+```
+
+## Epilogue
+
+Goody:
+
+```
+brew install --cask github
+```
 
 
 
