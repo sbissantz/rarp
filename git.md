@@ -167,6 +167,11 @@ push them to GitHub.
 git commit -m "Initial commit"
 ```
 
+NOTE: GIT ADD is missing
+NOTE: GIT ADD is missing
+NOTE: GIT ADD is missing
+NOTE: GIT ADD is missing
+
 Usually, you should be a bit more precise when documenting your changes! But
 for the sake of understanding the Git way of doing things, the snippet
 suffices. If you want to nuancly pin down all the new cool features you've
@@ -178,12 +183,64 @@ probably changed too much. Get used to committing smaller junks of code more
 often. The tip might prevent you from some ugly merging conflicts and
 contributes to a harmonic multi user workflow on large, difficult projects.
 
+All right, time to push!? Nope.. We first have to set up a remote repository on
+GitHub. What this means is, we to create the destination folder for the files
+to push. Because our third party application is GitHub, navigate to the
+website. On the website click `Repositories` then `New`. Give it a cool name
+and `Create repository`. Time to return to your command line. After setting up
+the destination folder we need to tell it Git. We'll use the following formula:
 
-All right, time to push!
+```
+git remote add origin git@github.com:<username>/<cool_repo>.git
+```
+
+In my case the formula transforms to:
+
+```
+git remote add origin git@github.com:sbissantz/test_dir.git
+```
+
+Double check it with:
+
+```
+git remote -v
+```
+
+The command `git remote -v` should return something like `origin
+git@github.com:sbissantz/test_dir.git (fetch)` and `origin
+git@github.com:sbissantz/test_dir.git (push)`. Making a long story short, the
+remote repo at GitHub is now the middle of your file solar system. It the
+`òrigin` to be more precise. For the sake of completeness, the folder were your
+files are at the moment is associated with your (local) master branch. Time to
+push? Well, keep cool young padawan! We're going to initiate the push right
+now...
+
+In a Nutshell:
+
+```
+git push -u 
+
+git add . ; git commit -m "inital commit" ; 
+```
+
+
+As I said, git is a revision control system. So first we need to stage the
+files. Therefore we carry the files to a staging area, aka the `INDEX`. Think
+of the staging area as a place were all commits resides before the changes
 
 
 
-Oh no! We forgot to set up a remote repository. 
+
+
+
+
+
+
+
+
+
+
+
 
 ```
 git log | grep "commit"
