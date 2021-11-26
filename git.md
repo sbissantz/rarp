@@ -161,30 +161,57 @@ cat test_{1..9}
 ```
 
 All right, now its time to commit your initial changes to all those files and
-push them to GitHub.
+push them to GitHub. However, before your can commit your changes, you have to
+stage them. In the Git this is associated with the `ÌNDEX`.  The `INDEX` is the
+staging area for all commits. This is were all commits reside before they are
+pushed to the remote repository. The last commit is indicated by `HEAD` the
+pointer to your last commit. All this terminology must sound wired; so lets
+embed them in a story to get the concept right. 
+
+Think of the process (committing a change) as you traveling to Zurich by train.
+You obviously embody a commit. If you want to leave Landau (the working
+directory) to travel to Zurich (the location of the remote repository) you go
+to the railroad station (staging area). Others (commits) do so as well. So the
+station is kind of an assembly point for all of you (`ÌNDEX`) . When the train
+(the push command) enters the station its time to leave. 4 hours later you'll
+arrive at Zurich (changes commited). Side note: I hope your internet connection
+will make it earlier..
+
+The story is ridiculous -- I know -- but hopefully you know what to do next
+(before pushing local changes). Yes? Well, then the story has served its
+purpose. No? ..just go ahead. 
 
 ```
-git commit -m "Initial commit"
+git add "test_1"
 ```
 
-NOTE: GIT ADD is missing
-NOTE: GIT ADD is missing
-NOTE: GIT ADD is missing
-NOTE: GIT ADD is missing
+All right, you(r commit) can't wait to get off. So lets buy him a ticket:
 
-Usually, you should be a bit more precise when documenting your changes! But
-for the sake of understanding the Git way of doing things, the snippet
-suffices. If you want to nuancly pin down all the new cool features you've
+```
+git commit -m "Ticket to Zurich"
+```
+
+Usually, you should not ulk arround with commit messages. Be as precise as you
+can when documenting your changes! But for the sake of understanding the Git
+way of doing things, the snippet suffices. 
+
+However, if you want to nuancly pin down all the new cool features you've
 implemented, make sure to restrict yourself to 80 characters and type `git
 commit`. `git commit` will start your previously defined editor (nvim, emacs,
 atom,...). Why 80 characters?  Well, 80 is arbitrary. But it is a good rule of
 thumb: If you cannot outline the changes you made within 80 characters, you
 probably changed too much. Get used to committing smaller junks of code more
-often. The tip might prevent you from some ugly merging conflicts and
+often. The tip could prevent you from some ugly merging conflicts and
 contributes to a harmonic multi user workflow on large, difficult projects.
 
-All right, time to push!? Nope.. We first have to set up a remote repository on
-GitHub. What this means is, we to create the destination folder for the files
+#
+# STOP
+#
+
+All right, time to push!? Nope.. We first have to set up a remote repository
+and define its location (no its not Zurich; most of the time its an URL).
+
+What this means is, we to create the destination folder for the files
 to push. Because our third party application is GitHub, navigate to the
 website. On the website click `Repositories` then `New`. Give it a cool name
 and `Create repository`. Time to return to your command line. After setting up
