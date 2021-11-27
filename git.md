@@ -1,18 +1,29 @@
 # Using git and GitHub
 
-This script is just another how-to for Git and GitHub. First, make sure you
-installed Git (either manually or using `brew`) and signed up for GitHub. If
-so, we can set up your user account. 
+This script is just another how-to for Git and GitHub. Before you start, please
+make sure you installed Git (either manually or using `brew`) and signed up for
+GitHub (or BitBucket). If so, we can set up your user account. 
 
-But let me tell you first, what git actually is. Git is a revision control
-system. The concept is straightforward: You edit a file and track what you
-edited. Afterward, you often push your previously made changes to a repository.
-In simple terms, a repository is more or less a box to store scripts. 
+Alright! Prior to our hands-on tutorial, let me lose a few words about Git.
+Git is a revision control system. The concept is straightforward: You modify a
+file and document the changes. After a while you'll have a full-blown
+documentation of the development process the file went through. Why should you
+care? In short, Git is checksummed! It documents every change in file content
+and labels it. It is like the best filing cabinet you'll ever have.  You can't
+loose a state of your development process because some version of it will be
+stored somewhere (a Git file in .git). Once you committed a change, you can't
+loose. In addition, others can contribute to your textualized thoughts, moods
+and feelings and their commited ideas are also labeled and stored. You guys can
+go wild and Nanny McGit will clean up the rubble.
 
-All right, that's enough terminology to get you going. Git is a sophisticated
-tool and its terminology is even more so. I don't want to dampen enthusiasm by
-overloading things with terminology right now. It will come along the way.
-Instead, let's jump right into practice!
+Now you know what Git is. But there is one additional concept I want to leave
+you with, before we let of steam: the Remote Repository. In simple terms, a
+remote repository is more or less a box to store scripts online. More
+specifically, it is a stream of versions of your project which are hosted
+"in-" or online. That's enough terminology to get you going. Git is a
+sophisticated tool and its terminology is even more so. I don't want to dampen
+enthusiasm by overloading things with terminology right now. It will come along
+the way.  Instead, let's jump right into practice!
 
 ## Git
 
