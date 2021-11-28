@@ -1,37 +1,42 @@
 # Using git and GitHub
 
 This script is just another how-to for Git and GitHub. Before you start, please
-make sure you installed Git (either manually or using `brew`) and signed up for
-GitHub (or BitBucket). If so, we can set up your user account. 
+make sure you installed Git. Open a terminal (`Command` + `Space`, "terminal")
+and fire `git --version` in the black whole. Robert should answer with a
+version number, e.g.: `git version 2.33.1`. If he tells you `command not
+found...` install it either manually or using `brew install git`. What else?
+Ah, you should sign up for GitHub ..or Bitbucket ..or any other service to host
+your code, (plain) text files, etc. Whenever `git --version` returns a number,
+we are ready to go.
 
-Alright! Prior to our hands-on tutorial, let me lose a few words about Git.
-Git is a revision control system. The concept is straightforward: You modify a
-file and document the changes. After a while you'll have a full-blown
-documentation of the development process the file went through. Why should you
-care? In short, Git is checksummed! It documents every change in file content
-and labels it. It is like the best filing cabinet you'll ever have.  You can't
+Prior to our hands-on tutorial, let me lose a few words on Git. Git is a
+revision control system. The concept is straightforward: You modify a file and
+document the changes. After a while you'll have a full-blown documentation of
+the development process the file went through. Why should you care? In short,
+Git is checksummed. It documents every change in file content and labels it
+with a hash. It is like the best filing cabinet you'll ever have. You can't
 loose a state of your development process because some version of it will be
-stored somewhere (a Git file in .git). Once you committed a change, you can't
-loose. In addition, others can contribute to your textualized thoughts, moods
-and feelings and their commited ideas are also labeled and stored. You guys can
-go wild and Nanny McGit will clean up the rubble.
+stored somewhere (online, a friends machine, your Git file in .git ...). Once
+you committed a change, its hard to loose it. Distributed version control &
+Git's checksumming nature will take care. More on that in a moment. In
+addition, the Gitiverse makes it easy for others to contribute to your
+textualized thoughts, moods and feelings. Their commited ideas are also labeled
+and stored. You guys can go fully wild and Nanny McGit will clean up the rubble!
 
 Now you know what Git is. But there is one additional concept I want to leave
 you with, before we let of steam: the Remote Repository. In simple terms, a
-remote repository is more or less a box to store scripts online. More
-specifically, it is a stream of versions of your project which are hosted
-"in-" or online. That's enough terminology to get you going. Git is a
-sophisticated tool and its terminology is even more so. I don't want to dampen
-enthusiasm by overloading things with terminology right now. It will come along
-the way.  Instead, let's jump right into practice!
+remote repository is a box to store scripts online. Specifically, it is a
+stream of versions of your project which are hosted "in-" or online. Alright,
+enough terminology for the moment. Git is a sophisticated tool and its
+terminology is even more so. I don't want to dampen enthusiasm by overloading
+things with terminology right now. It will come along the way. Instead, let's
+jump right into practice!
 
 ## Git
 
-Before we can control revisions using Git, we have to tell it your user mail
-and your name. Thus, we have to setup the global user and assign him/her an
-email address.
-
-## Set up the global user 
+Time to set up your acount. Before you can control revisions, Git wants to
+know, who you are. We have to tell it your user mail and your name. Technically
+speaking, we have to setup the global user and assign him/her an email address.
 
 ```
 git config --global user.name "foo bar"
@@ -42,16 +47,17 @@ git config --global user.email "foo@bar.com`
 
 ## Additionals
 
-Two other settings proved to be handy (at least for me). The first one
+Two other settings proved to be handy options (at least for me). The first one
 generates a (more) colorful output. The second one sets your default editor. I
 love doing things the (n)vim way. But feel free to use a different editor
-(e.g., Nano, Emacs, etc.).  If the international scientific term for confusion
-pops up in your skull -- WTF?! -- you might ask "what the hell is an editor?".
-Well, more precisely, we're talking about a text editor. Literally speaking, it
-is a 'tor' to edit text. Whatever a 'tor' may be. If the term is still not
-self-explanatory for you (as it wasn't for me), think of it as MS Word for
-plain text files. So why not use MS Word instead? Well, the simple answer is:
-you're a reborn nerd! Nerds don't use MS Office -- so shhh!
+(e.g., Gedit, Nano, Emacs, etc.). If the international scientific term for
+confusion pops up in your skull -- WTF?! -- you might ask "what the hell is an
+editor?".  Well, more precisely, we're talking about a text editor. Literally
+speaking, it is a 'tor' to edit text. Whatever a 'tor' may be. If the term is
+still not self-explanatory for you (as it wasn't for me), think of it as MS
+Word for plain text files. So why not use MS Word instead? Well, the simple
+answer is: Its heavy-weight -- and you're a reborn nerd! Nerds swear one black 
+consoles and red themes, so shhhhh! 
 
 ```
 $ git config --global color.ui true
@@ -62,16 +68,17 @@ $ git config --global core.editor nvim
 
 ## Github
 
-Now it's time to sign up for GitHub (or, to name an alternative, 'BitBucket').
-Done? Great, then we can move on. As part of good practice we'll use GitHub
-with SSH. If you haven't set up SSH already, read the instructions in `ssh.md`
-and joint afterwards. 
+Did you already sign up for GitHub or any of its companions? Great! In the
+following, I will use GitHub. But feel free to adapt the snippets and use
+BitBucket, or whatever you like. As part of good practice we'll use GitHub with
+SSH. If you haven't set up SSH already, read the instructions in `ssh.md` and
+joint afterwards. 
 
-Let's start rollin'! We start the journey by getting GitHub to know your
-account. If you remember the `ssh.md` story, its now time to exchange phone
-numbers. Therefore, go to the GitHub website, click on your picture, navigate
-to 'settings' and select 'SSH and GPG keys'. Choose 'new SSH key' and paste
-(Command + V) the output of the following command:
+Let's start rollin'! We begin the journey transfering your public key to your
+GitHub profile. If you remember the `ssh.md` story, its now time to exchange
+phone numbers. Thus, navigate to the GitHub website, click on your picture,
+select 'settings' and choose 'SSH and GPG keys'. Click 'new SSH key' and paste
+(`Command` + `V`) the output of the following command:
 
 ```
 pbcopy < ~/.ssh/id_rsa.pub
@@ -85,11 +92,11 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 
 ## Test
 
-Now it's time to testify that GitHub knows who you are. Once more, if you
-remember the `ssh.md` story its like testing that Stacy gave you the correct
-number. So let's write her a short message. For those of you, who don't know
-the romantic story -- think of the following step as the Saturday night club
-bouncer test: Do you gain access to the party?
+Time to testify that GitHub knows who you are. Remember the Clemens Stacy love
+story in `ssh.md`? Scene 3: Robert makes sure Stacy gave him the correct
+number. So let's write her a short message. Note: For those of you, who don't
+know their romantic story -- think of the following step as the Saturday night
+club bouncer test: Do you gain access to the party (GitHub knows you)?
 
 ```
 ssh -T git@github.com
@@ -112,25 +119,25 @@ more than that! With this in mind, let's get started.
 
 To control your revisions, you need something substantial. Let's say a
 directory. Because we are reborn nerds, we use the terminal. Hands off the
-mouse folks! Press and hold <command> and tap <space>. If you see the Spotlight
-Search type "terminal". If you face the scary dark black hole and the bright
-light shining prompt enter:
+mouse folks! Press and hold `command` and tap `space`. If you see the Spotlight
+Search type "terminal" (omit quotes). If you face the scary dark black hole and
+the bright light shining prompt enter:
 
 ```
 mkdir -p test_dir ; cd test_dir
 ```
 
 The snippet creates a directory (`mkdir`) and made it your current working
-directory (`cd`).  Double-check with `pwd` which is the instruction to print
-the current working directory. Robert (your computeralized servant) should spit
-out something like `Users/<username>/test_dir`.
+directory (`cd`). Double-check with `pwd` which is the instruction to print the
+current working directory. Robert (your silicon servant) should spit out
+`Users/<username>/test_dir`.
 
 ```
 pwd
 ```
 
 Now it's time to create a repo(sitory). You can talk to Robert very definitely:
-'Robert, use git to initialize a repository'. In codeish:
+'Robert, use git to initialize a repository'. In code-ish:
 
 ```
 git init
