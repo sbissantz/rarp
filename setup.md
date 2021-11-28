@@ -5,7 +5,7 @@
 
 ---
 
-Open the Spotlight search by pressing <command> and <space>. Type "terminal"
+Open the Spotlight search by pressing `command` and `space`. Type "terminal"
 (omit quotes). If you see a big black something, you are right. The frame
 limiting the black something is your terminal. Think of the terminal as a
 non-graphical way to interact with your system. The terminal itself comprises 
@@ -24,7 +24,7 @@ afterwards. It won't work. Robert is literally fallen asleep (i.e., your system
 is not ready to operate). So make sure Robert is awake (there is a prompt)
 before you start hacking.
 
-[^1:] More precisely, `steven@taure ~%` is a result of `[\u@\h \W]\$`. See `echo
+[^1]: More precisely, `steven@taure ~%` is a result of `[\u@\h \W]\$`. See `echo
 $PS1`.
 
 To interact with Robert you generally slice in some tiny amount of input (a
