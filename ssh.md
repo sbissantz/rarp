@@ -3,7 +3,7 @@
 ---
 
 It is part of good practice to use SSH. That's why we'll set it up here. First
-and foremost, this implies to get an SSH key. But before jumping right into
+and foremost, this implies to get a SSH key. But before jumping right into
 practice, let me motivate the journey a litte bit.
 
 SSH is an abbreviation for Secure (Socket) Shell. The concept is built upon a
@@ -11,7 +11,7 @@ pre-specified ethic (the ssh protocol), clarifying how interactions between
 machines should proceed. A key principle of SSH is authentication. The reward
 comes in the form of an encrypted connection to another network.
 
-But How does it work? Well, in this story there are two protagonists. Let's
+But how does it work? Well, in this story there are two protagonists. Let's
 call them Clemence (SSH Client) and Stacy (SSH Server). Both meet at a party.
 First, Clemens tries to get in touch with Stacy. Success! After a while, she
 passes him her number (the public key). He stores her number in his iPhone
@@ -87,7 +87,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 ## Epilogue
 
 There is one goody left which might come in handy, once you'll use SSH on a
-daily basis: an SSH agent.
+daily basis: a SSH agent.
 
 ---
 
