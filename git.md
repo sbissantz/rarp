@@ -15,28 +15,28 @@ document the changes. After a while you'll have a full-blown documentation of
 the development process the file went through. Why should you care? In short,
 Git is checksummed. It documents every change in file content and labels it
 with a hash. It is like the best filing cabinet you'll ever have. You can't
-loose a state of your development process because some version of it will be
-stored somewhere (online, a friends machine, your Git file in .git ...). Once
-you committed a change, its hard to loose it. Distributed version control &
-Git's checksumming nature will take care. More on that in a moment. In
-addition, the Gitiverse makes it easy for others to contribute to your
+loose a state of your development process because some version of it will lay
+around somewhere (online, a friends machine, your Git file in .git ...). In
+short: Once you committed a change, its hard to loose it. Distributed version
+control & Git's checksumming nature will take care. More on that in a moment.
+In addition, the Gitverse makes it easy for others to contribute to your
 textualized thoughts, moods and feelings. Their commited ideas are also labeled
-and stored. You guys can go fully wild and Nanny McGit will clean up the rubble!
+and stored. You guys can go wild and Nanny McGit will clean up the rubble!
 
 Now you know what Git is. But there is one additional concept I want to leave
-you with, before we let of steam: the Remote Repository. In simple terms, a
-remote repository is a box to store scripts online. Specifically, it is a
-stream of versions of your project which are hosted "in-" or online. Alright,
-enough terminology for the moment. Git is a sophisticated tool and its
-terminology is even more so. I don't want to dampen enthusiasm by overloading
-things with terminology right now. It will come along the way. Instead, let's
-jump right into practice!
+you with: the Remote Repository. In simple terms, a remote repository is a box
+to store scripts online. Specifically, it is a stream of versions of your
+project which are hosted "in-" or online. Alright, enough terminology for the
+moment. Git is a sophisticated tool and its terminology is even more so. I
+don't want to dampen enthusiasm by overloading things with terminology right
+now. It will come along the way. Instead, let's jump right into practice!
 
 ## Git
 
-Time to set up your acount. Before you can control revisions, Git wants to
-know, who you are. We have to tell it your user mail and your name. Technically
-speaking, we have to setup the global user and assign him/her an email address.
+Time to set up your account. Before you can control revisions, Git wants to
+know, who you are. More specifically, it wants your user mail and your name.
+Technically speaking, we have to setup the global user and assign him/her an
+email address.
 
 ```
 git config --global user.name "foo bar"
@@ -50,14 +50,12 @@ git config --global user.email "foo@bar.com`
 Two other settings proved to be handy options (at least for me). The first one
 generates a (more) colorful output. The second one sets your default editor. I
 love doing things the (n)vim way. But feel free to use a different editor
-(e.g., Gedit, Nano, Emacs, etc.). If the international scientific term for
-confusion pops up in your skull -- WTF?! -- you might ask "what the hell is an
-editor?".  Well, more precisely, we're talking about a text editor. Literally
-speaking, it is a 'tor' to edit text. Whatever a 'tor' may be. If the term is
-still not self-explanatory for you (as it wasn't for me), think of it as MS
-Word for plain text files. So why not use MS Word instead? Well, the simple
-answer is: Its heavy-weight -- and you're a reborn nerd! Nerds swear one black 
-consoles and red themes, so shhhhh! 
+(e.g., Gedit, Nano, Emacs, etc.). If you love the GUI way of doings thing, you
+might have missed to stumble across this workhorse. A text editor is simply a
+neat tool to edit plain text files. It is like a slimmed-down fast version of
+MS Office for system files. It omits almost all conveniences for the sake of
+speed and low storage. Well, expect you fall in love with Emacs (as I did years
+ago). But that is another story..
 
 ```
 $ git config --global color.ui true
@@ -68,16 +66,19 @@ $ git config --global core.editor nvim
 
 ## Github
 
-Did you already sign up for GitHub or any of its companions? Great! In the
-following, I will use GitHub. But feel free to adapt the snippets and use
-BitBucket, or whatever you like. As part of good practice we'll use GitHub with
-SSH. If you haven't set up SSH already, read the instructions in `ssh.md` and
-joint afterwards. 
+Let me start over with a question: Did you already sign up for a GitHub
+account? To use any of its companions is also fine. Yes? Great! In the
+following, I stick with GitHub. Note: Once you understand the general strategy,
+you can easily adapt any snippet to run with, let's say, BitBucket. I really
+prefer its philosophy over GitHub's, but (once more) this is another story.
+We want to dive into practice now! 
 
-Let's start rollin'! We begin the journey transfering your public key to your
-GitHub profile. If you remember the `ssh.md` story, its now time to exchange
-phone numbers. Thus, navigate to the GitHub website, click on your picture,
-select 'settings' and choose 'SSH and GPG keys'. Click 'new SSH key' and paste
+As part of good practice we'll use GitHub with SSH. If you haven't set up SSH
+already, read the instructions in `ssh.md` and joint afterwards. Alright, Let's
+start rollin'! We begin the journey transfering your public key to your GitHub
+profile. If you remember the `ssh.md` story, its now time to exchange phone
+numbers. Thus, navigate to the GitHub website, click on your picture, select
+'settings' and choose 'SSH and GPG keys'. Click 'new SSH key' and paste
 (`Command` + `V`) the output of the following command:
 
 ```
@@ -93,8 +94,8 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 ## Test
 
 Time to testify that GitHub knows who you are. Remember the Clemens Stacy love
-story in `ssh.md`? Scene 3: Robert makes sure Stacy gave him the correct
-number. So let's write her a short message. Note: For those of you, who don't
+story in `ssh.md`? Scene 3: Clemens makes sure Stacy gave him the correct
+number. So let's write her a short message. Hint: For those of you, who don't
 know their romantic story -- think of the following step as the Saturday night
 club bouncer test: Do you gain access to the party (GitHub knows you)?
 
@@ -118,7 +119,7 @@ Git in a nutshell. You should be able to jump right off the ground. Nothing
 more than that! With this in mind, let's get started.
 
 To control your revisions, you need something substantial. Let's say a
-directory. Because we are reborn nerds, we use the terminal. Hands off the
+directory. Because we are reborn nerds, we'll use the terminal, Hands off the
 mouse folks! Press and hold `command` and tap `space`. If you see the Spotlight
 Search type "terminal" (omit quotes). If you face the scary dark black hole and
 the bright light shining prompt enter:
@@ -148,9 +149,9 @@ If Robert mentions something like `Initialized empty Git repository in
 
 ---
 
-Great! Time to bring `test_dir` to life. We'll first create a bunch of files.
-`touch` will be your friend. Equipping him with brace expansion characters
-allows him to multiplicate the result. Its like giving him the power ranger
+Cool! Time to bring `test_dir` to life. We'll first create a bunch of files.
+`touch` will be our friend. Equipping him with brace expansion characters
+allows us to multiplicate the result. Its like giving him the power ranger
 magic sword: one command -- nine test files.
 
 ```
@@ -179,7 +180,7 @@ cat test_{1..9}
 ```
 
 All right, now its time to commit your initial changes to all those files and
-push them to GitHub. However, before your can commit your changes, you have to
+push them to GitHub. But wait! Before your can commit your changes, you have to
 stage them. In the Git this is associated with the `ÌNDEX`.  The `INDEX` is the
 staging area for all commits. This is were all commits reside before they are
 pushed to the remote repository. The last commit is indicated by `HEAD` the
@@ -192,18 +193,18 @@ directory) to travel to Zurich (the location of the remote repository) you go
 to the railroad station (staging area). Others (commits) do so as well. So the
 station is kind of an assembly point for all of you (`ÌNDEX`) . When the train
 (the push command) enters the station its time to leave. 4 hours later you'll
-arrive at Zurich (changes commited). Side note: I hope your internet connection
-will make it earlier..
+arrive at Zurich (changes committed). Side note: Hopefully your machine will
+make it earlier..
 
 The story is ridiculous -- I know -- but hopefully you know what to do next
 (before pushing local changes). Yes? Well, then the story has served its
-purpose. No? ..just go ahead. 
+purpose. No? ...go ahead. 
 
 ```
 git add "test_1"
 ```
 
-All right, you(r commit) can't wait to get off. So lets buy him a ticket:
+All right, you(r commit) can't wait to get off. So lets buy them a ticket:
 
 ```
 git commit -m "Ticket to Zurich"
@@ -213,14 +214,15 @@ Usually, you should not ulk arround with commit messages. Be as precise as you
 can when documenting your changes! But for the sake of understanding the Git
 way of doing things, the snippet suffices. 
 
-However, if you want to nuancly pin down all the new cool features you've
-implemented, make sure to restrict yourself to 80 characters and type `git
-commit`. `git commit` will start your previously defined editor (nvim, emacs,
-atom,...). Why 80 characters?  Well, 80 is arbitrary. But it is a good rule of
-thumb: If you cannot outline the changes you made within 80 characters, you
-probably changed too much. Get used to committing smaller junks of code more
-often. The tip could prevent you from some ugly merging conflicts and
-contributes to a harmonic multi user workflow on large, difficult projects.
+However, if you are like Nanny McGit and want to nuancly pin down all the
+new cool features you've implemented, make sure to restrict yourself to 80
+characters and type `git commit`. `git commit` will start your previously
+defined editor (nvim, emacs, atom,...). Why 80 characters?  Well, 80 is
+arbitrary. But it is a good rule of thumb: If you cannot outline the changes
+you made within 80 characters, you probably changed too much. Get used to
+committing smaller junks of code more often. The tip could prevent you from
+some ugly merging conflicts and contributes to a harmonic multi user workflow
+on large, difficult projects.
 
 #
 # STOP
@@ -229,11 +231,11 @@ contributes to a harmonic multi user workflow on large, difficult projects.
 All right, time to push!? Nope.. We first have to set up a remote repository
 and define its location (no its not Zurich; most of the time its an URL).
 
-What this means is, we to create the destination folder for the files
-to push. Because our third party application is GitHub, navigate to the
-website. On the website click `Repositories` then `New`. Give it a cool name
-and `Create repository`. Time to return to your command line. After setting up
-the destination folder we need to tell it Git. We'll use the following formula:
+Now, is to make the destination folder for the files to push.
+Because our third party application is GitHub, navigate to the website. On the
+website click `Repositories` then `New`. Give it a cool name and `Create
+repository`. Time to return to your command line. After setting up the
+destination folder we need to tell it Git. We'll use the following formula:
 
 ```
 git remote add origin git@github.com:<username>/<cool_repo>.git
