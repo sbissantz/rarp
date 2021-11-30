@@ -124,6 +124,14 @@ STOP: Remote Repository (missing) ; e.g. @GitHub
 ssh -T git@github.com
 ```
 
+# Help!
+
+```
+$ git help <verb>
+git help config
+```
+
+
 # .gitignore
 (aka. .git/config/excludes)
 
