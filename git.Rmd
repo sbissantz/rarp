@@ -1,0 +1,133 @@
+---
+title: "Git & GitHub"
+author: "Steven Marcel Bißantz"
+output:
+  revealjs::revealjs_presentation:
+    theme: blood
+    highlight: pygments
+    center: true
+    slide_level: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Epilogue
+
+## 1st Aid (SSH)
+1. `ls -ld .ssh`
+2. `ssh-keygen -t rsa -C "foo@bar.com"`
+
+## Git & macOS (Homebrew)
+
+```
+brew install git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+##  Git & Windows 
+
+<https://git-scm.com/download/win>
+
+## 3rd Aid (Github)
+
+<https://github.com>
+
+## Cmd + Space > "Terminal" 
+
+## 4th Aid (check) 
+
+`git --version`
+
+# Foreword
+
+## What is Git?
+
+## Why use Git?
+
+## DVCS 
+
+## Why Git on the CMD?
+
+## (Remote) Repository
+A stream of versions 
+
+## The 3 States 
+(modified, staged, committed)
+
+## Workflow 
+(modify, stage, commit)
+
+# Setup 
+(run only @1st time)
+
+## Setup (obligatory)
+
+```
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
+## Setup (neat)
+
+```
+git config --global color.ui true
+git config --global core.editor nvim 
+```
+
+## Show setup
+
+```
+git config user.name 
+git config --list
+git config --list --show origin 
+```
+
+
+
+# Terminal 
+
+
+# Startup
+
+```
+git init
+```
+
+# Git Routine 
+
+## Reminder:
+
+# Git Routine 
+(modify, stage, commit)
+
+## modify
+
+
+## stage
+
+## commit
+
+## (push)
+STOP: Remote Repository (missing) ; e.g. @GitHub
+
+# @Github
+
+1. `"Settings" > "SSH and GPG keys" > New SSH key`
+2. `pbcopy < ~/.ssh/id_rsa.pub`
+3.  Cmd/Ctrl + v 
+
+## Peek-a-boo @Github
+
+```
+ssh -T git@github.com
+```
+
+# .gitignore
+(aka. .git/config/excludes)
+
+
+
+
+
