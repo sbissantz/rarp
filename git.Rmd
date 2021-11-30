@@ -131,6 +131,14 @@ $ git help <verb>
 git help config
 ```
 
+additionally: Quick help (options & flags)
+
+``
+git <verb> -h
+git add -h
+´``
+
+
 
 # .gitignore
 (aka. .git/config/excludes)
