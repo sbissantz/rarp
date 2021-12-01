@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Steven Marcel Bißantz" />
-  <title>Git &amp; GitHub</title>
+  <meta name="author" content="(Steven Marcel Bißantz)" />
+  <meta name="dcterms.date" content="2021-12-01" />
+  <title>Git them all!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -455,144 +456,389 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title">Git &amp; GitHub</h1>
-    <h2 class="author">Steven Marcel Bißantz</h2>
+    <h1 class="title">Git them all!</h1>
+  <h1 class="subtitle">..A far too short story!</h1>
+    <h2 class="author">(Steven Marcel Bißantz)</h2>
+    <h3 class="date">2021-12-01</h3>
 </section>
 
 <section>
-<section id="epilogue" class="title-slide slide level1">
-<h1>Epilogue</h1>
-
+<section id="prologue" class="title-slide slide level1">
+<h1>Prologue</h1>
+<p>…numerous prerequisites</p>
 </section>
-<section id="st-aid-ssh" class="slide level2">
-<h2>1st Aid (SSH)</h2>
+<section id="st-aid-xcode" class="slide level2">
+<h2>1st Aid (Xcode)</h2>
+<ol type="1">
+<li><code>xcode-select -p</code></li>
+<li><code>xcode-select --install</code></li>
+</ol>
+<p>see: <a href="https://github.com/sbissantz/rarp/setup.md" class="uri">https://github.com/sbissantz/rarp/setup.md</a></p>
+</section>
+<section id="nd-aid-ssh" class="slide level2">
+<h2>2nd Aid (SSH)</h2>
 <ol type="1">
 <li><code>ls -ld .ssh</code></li>
 <li><code>ssh-keygen -t rsa -C &quot;foo@bar.com&quot;</code></li>
 </ol>
+<p>see: <a href="https://github.com/sbissantz/rarp/ssh.md" class="uri">https://github.com/sbissantz/rarp/ssh.md</a></p>
 </section>
-<section id="git-macos-homebrew" class="slide level2">
-<h2>Git &amp; macOS (Homebrew)</h2>
-<pre><code>brew install git
-/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code></pre>
+<section id="rd-aid-git" class="slide level2">
+<h2>3rd Aid (Git)</h2>
+<ol type="1">
+<li><code>Cmd + Space &gt; &quot;Terminal&quot;</code></li>
+<li><code>git --version</code></li>
+</ol>
 </section>
-<section id="git-windows" class="slide level2">
-<h2>Git &amp; Windows</h2>
-<p><a href="https://git-scm.com/download/win" class="uri">https://git-scm.com/download/win</a></p>
+<section id="th-aid-install" class="slide level2">
+<h2>4th Aid (install!)</h2>
+<ol type="1">
+<li>Manually? (..go ahead!)</li>
+<li><code>brew install git</code></li>
+</ol>
+<p>Windows: <a href="https://git-scm.com/download/win" class="uri">https://git-scm.com/download/win</a></p>
 </section>
-<section id="rd-aid-github" class="slide level2">
-<h2>3rd Aid (Github)</h2>
+<section id="th-aid-homebrew" class="slide level2">
+<h2>5th Aid (Homebrew)</h2>
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code></pre>
+</section>
+<section id="th-aid-github" class="slide level2">
+<h2>6th Aid (Github)</h2>
 <p><a href="https://github.com" class="uri">https://github.com</a></p>
 </section>
-<section id="cmd-space-terminal" class="slide level2">
-<h2>Cmd + Space &gt; “Terminal”</h2>
-</section>
-<section id="th-aid-check" class="slide level2">
-<h2>4th Aid (check)</h2>
-<p><code>git --version</code></p>
+<section id="th-aid-gedit" class="slide level2">
+<h2>7th Aid (Gedit)</h2>
+<p><code>brew install gedit</code></p>
 </section></section>
 <section>
-<section id="foreword" class="title-slide slide level1">
-<h1>Foreword</h1>
-
+<section id="git-kick-off" class="title-slide slide level1">
+<h1>Git Kick Off</h1>
+<p>Yaay!</p>
 </section>
 <section id="what-is-git" class="slide level2">
 <h2>What is Git?</h2>
+<p>A revision control system (VCS)</p>
 </section>
 <section id="why-use-git" class="slide level2">
 <h2>Why use Git?</h2>
+<ol type="1">
+<li>Checksumming (track!)</li>
+<li>DVCS (safe!)</li>
+<li>Nanny McGit (organize!)</li>
+</ol>
 </section>
-<section id="dvcs" class="slide level2">
-<h2>DVCS</h2>
-</section>
-<section id="why-git-on-the-cmd" class="slide level2">
-<h2>Why Git on the CMD?</h2>
+<section id="why-git-cmd" class="slide level2">
+<h2>Why Git <span class="citation" data-cites="CMD">@CMD</span>?</h2>
+<p>..to get the full sense of satisfaction!</p>
+<p>CMD <span class="math inline">\(\rightarrow\)</span> GUI</p>
+<p>CMD <span class="math inline">\(\nleftarrow\)</span> GUI</p>
 </section>
 <section id="remote-repository" class="slide level2">
 <h2>(Remote) Repository</h2>
-<p>A stream of versions</p>
+<p>A commited &amp; SHA1-hased stream of versions</p>
+</section>
+<section id="sha-1-hash" class="slide level2">
+<h2>SHA-1 hash</h2>
+<p><code>62c4d1d6ec05050c439ec384b2bba11cd64d37a0</code></p>
+<p>#Chechsumming #commit!</p>
 </section>
 <section id="the-3-states" class="slide level2">
 <h2>The 3 States</h2>
 <p>(modified, staged, committed)</p>
 </section>
-<section id="workflow" class="slide level2">
-<h2>Workflow</h2>
+<section id="workflow-queued" class="slide level2">
+<h2>Workflow (queued)</h2>
 <p>(modify, stage, commit)</p>
 </section></section>
 <section>
-<section id="setup" class="title-slide slide level1">
-<h1>Setup</h1>
-<p>(run only <span class="citation" data-cites="1st">@1st</span> time)</p>
+<section id="global-user-setup" class="title-slide slide level1">
+<h1>Global User Setup</h1>
+<p>(only <span class="citation" data-cites="1st_time">@1st_time</span>)</p>
 </section>
 <section id="setup-obligatory" class="slide level2">
 <h2>Setup (obligatory)</h2>
-<pre><code>git config --global user.name &quot;John Doe&quot;
-git config --global user.email johndoe@example.com</code></pre>
+<ul>
+<li><code>git config --global user.name &quot;John Doe&quot;</code></li>
+<li><code>git config --global user.email johndoe@example.com</code></li>
+</ul>
 </section>
-<section id="setup-neat" class="slide level2">
-<h2>Setup (neat)</h2>
-<pre><code>git config --global color.ui true
-git config --global core.editor nvim </code></pre>
+<section id="additionals" class="slide level2">
+<h2>Additionals</h2>
+<ul>
+<li><code>git config --global color.ui true</code></li>
+<li><code>git config --global core.editor nvim</code></li>
+<li><code>git config --global core.editor gedit</code></li>
+<li><code>git config --global format.pretty oneline</code></li>
+</ul>
 </section>
 <section id="show-setup" class="slide level2">
 <h2>Show setup</h2>
-<pre><code>git config user.name 
-git config --list
-git config --list --show origin </code></pre>
-</section></section>
-<section id="terminal" class="title-slide slide level1">
-<h1>Terminal</h1>
-
+<ul>
+<li><code>git config user.name</code></li>
+<li><code>git config --list</code></li>
+<li><code>git config --list --show origin</code></li>
+</ul>
 </section>
-
-<section id="startup" class="title-slide slide level1">
-<h1>Startup</h1>
-<pre><code>git init</code></pre>
-</section>
-
-<section>
-<section id="git-routine" class="title-slide slide level1">
-<h1>Git Routine</h1>
-
-</section>
-<section id="reminder" class="slide level2">
-<h2>Reminder:</h2>
+<section id="your-turn-5-10-min" class="slide level2">
+<h2>Your turn! (5-10 min)</h2>
+<p>Set up your Git user account!</p>
+<p>#BreakOutRooms!?</p>
 </section></section>
 <section>
-<section id="git-routine-1" class="title-slide slide level1">
-<h1>Git Routine</h1>
-<p>(modify, stage, commit)</p>
-</section>
-<section id="modify" class="slide level2">
-<h2>modify</h2>
-</section>
-<section id="stage" class="slide level2">
-<h2>stage</h2>
-</section>
-<section id="commit" class="slide level2">
-<h2>commit</h2>
-</section>
-<section id="push" class="slide level2">
-<h2>(push)</h2>
-<p>STOP: Remote Repository (missing) ; e.g. <span class="citation" data-cites="GitHub">@GitHub</span></p>
-</section></section>
-<section>
-<section id="github" class="title-slide slide level1">
-<h1><span class="citation" data-cites="Github">@Github</span></h1>
+<section id="workflow" class="title-slide slide level1">
+<h1>Workflow</h1>
 <ol type="1">
-<li><code>&quot;Settings&quot; &gt; &quot;SSH and GPG keys&quot; &gt; New SSH key</code></li>
-<li><code>pbcopy &lt; ~/.ssh/id_rsa.pub</code></li>
-<li>Cmd/Ctrl + v</li>
+<li>initialize!</li>
+<li>Grrrr!<span class="math inline">\(^*\)</span></li>
+<li>push!</li>
+</ol>
+<p><span class="math inline">\(^*\)</span>: (G)it (r)outine (r)outine (r)outine (r)outine…</p>
+</section>
+<section id="initialize" class="slide level2">
+<h2>initialize!</h2>
+<ol type="1">
+<li><code>mkdir -p test_dir ; cd test_dir</code></li>
+<li><code>pwd</code></li>
+<li><code>git init</code></li>
+</ol>
+</section></section>
+<section id="grrr-git-routine" class="title-slide slide level1">
+<h1>Grrr! (Git Routine)</h1>
+<ol type="1">
+<li>modify!</li>
+<li>stage!</li>
+<li>commit!</li>
 </ol>
 </section>
-<section id="peek-a-boo-github" class="slide level2">
-<h2>Peek-a-boo <span class="citation" data-cites="Github">@Github</span></h2>
-<pre><code>ssh -T git@github.com</code></pre>
+
+<section>
+<section id="git-routine-cmds-dirs" class="title-slide slide level1">
+<h1>Git Routine (cmds &amp; dirs)</h1>
+<p>check Repo status: <code>git status</code></p>
+<ol type="1">
+<li>modifiy! (WD)</li>
+<li><code>git add</code> (INDEX)</li>
+<li><code>git commit</code> (HEAD)</li>
+</ol>
+</section>
+<section id="modify" class="slide level2">
+<h2>modify!</h2>
+<ol type="1">
+<li><code>touch test_{1..9}</code></li>
+<li><code>echo &quot;I am a test&quot; &gt;&gt; test_{1..9}&quot;</code></li>
+<li><code>cat test_{1..9}</code></li>
+</ol>
+</section>
+<section id="stage" class="slide level2">
+<h2>stage!</h2>
+<ul>
+<li><code>git add &quot;test_1&quot;</code></li>
+<li><code>git add .</code></li>
+<li><code>git add -i</code></li>
+</ul>
+</section>
+<section id="commit" class="slide level2">
+<h2>commit!</h2>
+<ul>
+<li><code>git commit</code> (core.editor)</li>
+<li><code>git commit -m &quot;typos&quot;</code></li>
+<li><code>git commit -a</code></li>
+<li><code>git commit -a -m &quot;typos&quot;</code></li>
+</ul>
+</section>
+<section id="correct-commit" class="slide level2">
+<h2>correct commit!</h2>
+<p><code>git commit --amend -m &quot;typos&quot;</code></p>
+</section>
+<section id="push" class="slide level2">
+<h2>push?</h2>
+<p>STOP! What is missing?</p>
+</section>
+<section id="push-1" class="slide level2">
+<h2>push?!</h2>
+<p>Ah, the remote repository..</p>
+<p>e.g.: <span class="citation" data-cites="GitHub">@GitHub</span></p>
+</section>
+<section id="github-local-push-setup" class="slide level2">
+<h2><span class="citation" data-cites="Github">@Github</span> &amp; local (push setup)</h2>
+<ol type="1">
+<li><code>&quot;Settings&quot; &gt; &quot;SSH and GPG keys&quot;</code></li>
+<li><code>pbcopy &lt; ~/.ssh/id_rsa.pub</code></li>
+<li>Cmd/Ctrl + v <span class="citation" data-cites="GitHub">@GitHub</span></li>
+</ol>
+</section>
+<section id="peek-a-boo-github-test" class="slide level2">
+<h2>Peek-a-boo <span class="citation" data-cites="Github">@Github</span> (test)</h2>
+<p><code>ssh -T git@github.com</code></p>
+</section>
+<section id="local-push-setup" class="slide level2">
+<h2><span class="citation" data-cites="local">@local</span> (push setup)</h2>
+<p>(..only once per repo!)</p>
+<pre><code>git remote add origin git@github.com:sbissantz/test_dir.git
+git remote add origin https://github.com/&lt;username&gt;/&lt;new_repo&gt;.git
+git remote -v</code></pre>
+</section>
+<section id="push-2" class="slide level2">
+<h2>push!</h2>
+<ul>
+<li><code>git push -u origin master</code></li>
+<li><code>git push -u</code></li>
+<li><code>git push</code></li>
+</ul>
+</section>
+<section id="help" class="slide level2">
+<h2>help!</h2>
+<ul>
+<li><code>git help &lt;verb&gt;</code></li>
+<li><code>git help config</code></li>
+<li><code>git &lt;verb&gt; -h</code></li>
+</ul>
+</section>
+<section id="in-a-nutshell" class="slide level2">
+<h2>…in A Nutshell</h2>
+<ol type="1">
+<li><code>git init</code> (1x)</li>
+<li>modify</li>
+<li><code>git add</code></li>
+<li><code>git commit</code></li>
+<li><code>git remote add origin</code> (1x)</li>
+<li><code>git push -u origin master</code></li>
+</ol>
+</section>
+<section id="your-turn-10-min" class="slide level2">
+<h2>Your turn! (10 min)</h2>
+<ol type="1">
+<li>Set up a remote repo <span class="citation" data-cites="your_box">@your_box</span></li>
+<li>{modiy, stage &amp; push changes}</li>
+</ol>
+<p>#BreakOutRooms!?</p>
+</section></section>
+<section>
+<section id="contribute" class="title-slide slide level1">
+<h1>Contribute!</h1>
+<ol type="1">
+<li>fork! (<span class="citation" data-cites="GitHub">@GitHub</span>)</li>
+<li>clone! (<span class="citation" data-cites="local">@local</span>)</li>
+<li>push back! (<span class="citation" data-cites="local">@local</span>)</li>
+</ol>
+</section>
+<section id="fork-github" class="slide level2">
+<h2>fork! (<span class="citation" data-cites="GitHub">@GitHub</span>!)</h2>
+<p><code>&gt; Repo &gt; Fork (upper right)</code></p>
+</section>
+<section id="clone-local" class="slide level2">
+<h2>clone! (<span class="citation" data-cites="local">@local</span>)</h2>
+<ol type="1">
+<li><code>git clone git@github.com:sbissantz/test_dir</code></li>
+<li><code>cd test_dir</code></li>
+<li><code>git remote -v</code></li>
+<li><code>git remote add steven git@github.com/test_dir</code></li>
+</ol>
+</section>
+<section id="push-back" class="slide level2">
+<h2>push back!</h2>
+<p><code>git push -u steven git@github.com/test_dir</code></p>
+</section>
+<section id="vs." class="slide level2">
+<h2>// vs. @</h2>
+<p><code>git://github.com/</code> (read!)</p>
+<p>vs</p>
+<p><code>git@github.com/</code> (+write!)</p>
+</section>
+<section id="your-turn-10-min-1" class="slide level2">
+<h2>Your turn! (10 min)</h2>
+<ol type="1">
+<li>Clone a repostiry (e.g. <code>test_dir</code>)</li>
+<li>{modify, stage, commit} your changes</li>
+<li>push back!</li>
+</ol>
+<p>#BreakOutRooms!?</p>
+</section></section>
+<section>
+<section id="accept-proposals" class="title-slide slide level1">
+<h1>Accept proposals!</h1>
+<ol type="1">
+<li>(establish connection)</li>
+<li>pull!</li>
+<li>fetch!</li>
+<li>merge!</li>
+<li>push back!</li>
+</ol>
+</section>
+<section id="establish-connections" class="slide level2">
+<h2>(establish connections)</h2>
+<p>…if not done already!</p>
+<pre><code>git remote add steven git://github.com/steven/test_dir</code></pre>
+</section>
+<section id="get-them" class="slide level2">
+<h2>get them!</h2>
+<p><code>git fetch</code> + <code>git merge</code> = <code>git pull</code></p>
+</section>
+<section id="git-pull" class="slide level2">
+<h2>git pull</h2>
+<ul>
+<li><code>git pull</code></li>
+<li><code>git pull steven master</code></li>
+</ul>
+</section>
+<section id="push-back-1" class="slide level2">
+<h2>push back!</h2>
+<ul>
+<li><code>git push</code></li>
+</ul>
+</section>
+<section id="note-pull-request" class="slide level2">
+<h2>Note: Pull request?</h2>
+<p>…closes automatically!</p>
+</section>
+<section id="your-turn-10-min-2" class="slide level2">
+<h2>Your turn! (10 min)</h2>
+<ol type="1">
+<li>Find a contributor! (e.g. <code>me</code>)</li>
+<li>Make him/her contribute!</li>
+<li>Pull his/her changes!</li>
+</ol>
+<p>#BreakOutRooms!?</p>
+</section>
+<section id="merge-conflicts" class="slide level2">
+<h2>Merge conflicts</h2>
+<ol type="1">
+<li><code>git pull steven master</code></li>
+<li><code>gedit/nvim</code> conflicting file (<code>&lt;&lt;to&gt;&gt;</code>)</li>
+<li><code>git add .</code></li>
+<li><code>git commit</code></li>
+</ol>
 </section></section>
 <section id="gitignore" class="title-slide slide level1">
 <h1>.gitignore</h1>
 <p>(aka. .git/config/excludes)</p>
+</section>
+
+<section>
+<section id="github-desktop" class="title-slide slide level1">
+<h1>GitHub Desktop</h1>
+<p><a href="https://desktop.github.com/" class="uri">https://desktop.github.com/</a></p>
+</section>
+<section id="github-desktop-install" class="slide level2">
+<h2>GitHub Desktop (install!)</h2>
+<p><code>brew install --cask github</code></p>
+</section>
+<section id="github-desktop-tip" class="slide level2">
+<h2>GitHub Desktop (tip)</h2>
+<p><code>@GitHub &gt; Code &gt; Open with GitHub Desktop</code></p>
+</section></section>
+<section id="git-rstudio" class="title-slide slide level1">
+<h1>Git &amp; Rstudio</h1>
+<p><code>&gt; Tools &gt; Global Option &gt; Git/SVN</code></p>
+</section>
+
+<section id="aliases" class="title-slide slide level1">
+<h1>.aliases</h1>
+<p>..useful to save keystrokes!</p>
+<ol type="1">
+<li><code>which $SHELL</code></li>
+<li>edit: <code>.zshrc</code> or <code>.bashrc</code></li>
+</ol>
 </section>
     </div>
   </div>
