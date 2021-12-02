@@ -60,6 +60,7 @@ ago). But that is another story..
 ```
 $ git config --global color.ui true
 $ git config --global core.editor nvim
+$ git config --global format.pretty oneline
 ```
 
 ---
@@ -75,7 +76,7 @@ We want to dive into practice now!
 
 As part of good practice we'll use GitHub with SSH. If you haven't set up SSH
 already, read the instructions in `ssh.md` and joint afterwards. Alright, Let's
-start rollin'! We begin the journey transfering your public key to your GitHub
+start rollin'! We begin the journey transferring your public key to your GitHub
 profile. If you remember the `ssh.md` story, its now time to exchange phone
 numbers. Thus, navigate to the GitHub website, click on your picture, select
 'settings' and choose 'SSH and GPG keys'. Click 'new SSH key' and paste
@@ -94,7 +95,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 ## Test
 
 Time to testify that GitHub knows who you are. Remember the Clemens Stacy love
-story in `ssh.md`? Scene 3: Clemens makes sure Stacy gave him the correct
+story in `ssh.md`? Scene 3: Clemens makes sure Stacy gave him her correct
 number. So let's write her a short message. Hint: For those of you, who don't
 know their romantic story -- think of the following step as the Saturday night
 club bouncer test: Do you gain access to the party (GitHub knows you)?
@@ -103,12 +104,17 @@ club bouncer test: Do you gain access to the party (GitHub knows you)?
 ssh -T git@github.com
 ```
 
-Yaaay! Success. Time to party!
+The bouncer answers:
 
 ```
 Hi <username>! You've successfully authenticated, but GitHub does not provide
 shell access.
 ```
+
+Alright, Maschomei knows us. Damn! Its a private party..Nevermind, we have no
+time to party anyway. We gotta continue setting up Git. But this time we know
+for certain (a) SSH is working and (b) GitHub knows who we are. 
+
 ---
 
 ## Using git and GitHub
@@ -138,7 +144,7 @@ pwd
 ```
 
 Now it's time to create a repo(sitory). You can talk to Robert very definitely:
-'Robert, use git to initialize a repository'. In code-ish:
+'Robert, use git to initialize a repository'. In code-ish this reads as:
 
 ```
 git init
@@ -179,32 +185,36 @@ To prove that Robert kept his word, click the up arrow two times or type:
 cat test_{1..9}
 ```
 
+### Staging & committing 
+
 All right, now its time to commit your initial changes to all those files and
 push them to GitHub. But wait! Before your can commit your changes, you have to
 stage them. In the Git this is associated with the `ÌNDEX`.  The `INDEX` is the
-staging area for all commits. This is were all commits reside before they are
-pushed to the remote repository. The last commit is indicated by `HEAD` the
-pointer to your last commit. All this terminology must sound wired; so lets
-embed them in a story to get the concept right. 
+also known as the staging area for all commits. This is were all commits reside
+before they are pushed to the remote repository. More specifically it is a Git
+file which knows what will be part of your next commit. Moreover, the last
+commit is indicated by `HEAD`. Or, to put it another way,`HEAD` the pointer to
+your last commit. All this terminology must sound wired; so lets embed them in
+a story to get the concept right. 
 
 Think of the process (committing a change) as you traveling to Zurich by train.
 You obviously embody a commit. If you want to leave Landau (the working
-directory) to travel to Zurich (the location of the remote repository) you go
-to the railroad station (staging area). Others (commits) do so as well. So the
-station is kind of an assembly point for all of you (`ÌNDEX`) . When the train
-(the push command) enters the station its time to leave. 4 hours later you'll
-arrive at Zurich (changes committed). Side note: Hopefully your machine will
-make it earlier..
+directory) to travel all the way down to Zurich (the location of the remote
+repository) you gotta go to the railroad station (staging area). Others
+(commits) do so as well. So the station is kind of an assembly point for all of
+you (`ÌNDEX`) . When the train (the push command) enters the station its time
+to leave. 4 hours later you'll arrive at Zurich (changes committed). Side note:
+Hopefully your machine will make it earlier..
 
 The story is ridiculous -- I know -- but hopefully you know what to do next
-(before pushing local changes). Yes? Well, then the story has served its
-purpose. No? ...go ahead. 
+(before pushing local changes). Yes? Well, if "staging" is your answer, than
+the story has served its purpose. No? ...just go ahead. 
 
 ```
 git add "test_1"
 ```
 
-All right, you(r commit) can't wait to get off. So lets buy them a ticket:
+All right, you(r commit) can't wait to get off. So lets buy it a ticket:
 
 ```
 git commit -m "Ticket to Zurich"
@@ -214,8 +224,8 @@ Usually, you should not ulk arround with commit messages. Be as precise as you
 can when documenting your changes! But for the sake of understanding the Git
 way of doing things, the snippet suffices. 
 
-However, if you are like Nanny McGit and want to nuancly pin down all the
-new cool features you've implemented, make sure to restrict yourself to 80
+However, if you are like Nanny McGit (i.e., you want to nuancly pin down all
+the new cool features you've implemented), make sure to restrict yourself to 80
 characters and type `git commit`. `git commit` will start your previously
 defined editor (nvim, emacs, atom,...). Why 80 characters?  Well, 80 is
 arbitrary. But it is a good rule of thumb: If you cannot outline the changes
@@ -224,18 +234,26 @@ committing smaller junks of code more often. The tip could prevent you from
 some ugly merging conflicts and contributes to a harmonic multi user workflow
 on large, difficult projects.
 
-#
-# STOP
-#
+Let's sum up the uminous Git Workflow. Do you like fish stick? Great, than you
+know the MSC seal and got a mnemonic gratis. The 3 States are `(m)odified`,
+`(s)taged`, and `(c)omitted`. You change something (modify), then you
+start/continue to keep track of it (stage), and finally you document what
+you've changed (commit). That's all there is to it! Just Grrrrrr: Initialize a
+(G)it repo and the rest is applying the (r)outine over and over
+again..(r)outine (r)outine (r)outine (r)outine (r)outine (r)outine. The result
+will be a well documented development process your file(s) went through. Neat!
 
-All right, time to push!? Nope.. We first have to set up a remote repository
-and define its location (no its not Zurich; most of the time its an URL).
+### Remotes
 
-Now, is to make the destination folder for the files to push.
-Because our third party application is GitHub, navigate to the website. On the
-website click `Repositories` then `New`. Give it a cool name and `Create
-repository`. Time to return to your command line. After setting up the
-destination folder we need to tell it Git. We'll use the following formula:
+All right, time to push!? Nope.. First, we have to construe an shelter for your
+files online: a remote repository. Besides, we have to indicate it location (no
+its not Zurich; most of the time its an URL). So in advance there are two
+things two set up.
+
+Since our third party application is GitHub, navigate to the website. On the
+website click `Repositories` then `New`. Give it a cool name and click `Create
+repository`. Return to your command line. After setting up the
+destination folder on GitHub, we need to tell it git:
 
 ```
 git remote add origin git@github.com:<username>/<cool_repo>.git
@@ -253,7 +271,11 @@ Double check it with:
 git remote -v
 ```
 
-The command `git remote -v` should return something like `origin
+#
+# Stop
+#
+
+`git remote -v` should return something like `origin
 git@github.com:sbissantz/test_dir.git (fetch)` and `origin
 git@github.com:sbissantz/test_dir.git (push)`. Making a long story short, the
 remote repo at GitHub is now the middle of your file solar system. It the
