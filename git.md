@@ -271,18 +271,29 @@ Double check it with:
 git remote -v
 ```
 
+`git remote -v` should return something like `origin
+git@github.com:sbissantz/test_dir.git (fetch)` and `origin
+git@github.com:sbissantz/test_dir.git (push)`. Making a long story short, the
+remote repo at GitHub is now the middle of your file solar system. Literally,
+it is its `origin`. The solar metaphor is appropriate especially in terms of
+Gits "nature". Git is a "distributed version control systems" (DVCS). DVCSs
+distribute the content of the remote repository across multiple users. Everyone
+gets a physical (well rather "virtual" or "silicon") clone of the remote
+repository. Why is this helpful? Well, it has a lot in common with the
+principle of risk diversification in stock deals. Distributing the content
+across multiple instances, minimizes the risk of a total fallout when a single
+unit dies. However, if you wanna be petty the metaphor is incorrect. Git does
+not require to split the portfolio. It duplicates the whole instance instead.
+Neat!
+
+
 #
 # Stop
 #
 
-`git remote -v` should return something like `origin
-git@github.com:sbissantz/test_dir.git (fetch)` and `origin
-git@github.com:sbissantz/test_dir.git (push)`. Making a long story short, the
-remote repo at GitHub is now the middle of your file solar system. It the
-`òrigin` to be more precise. For the sake of completeness, the folder were your
-files are at the moment is associated with your (local) master branch. Time to
-push? Well, keep cool young padawan! We're going to initiate the push right
-now...
+For the sake of completeness, the folder were your files are at the moment is
+associated with your (local) master branch. Time to push?  Well, keep cool
+young padawan! We're going to initiate the push right now...
 
 In a Nutshell:
 
