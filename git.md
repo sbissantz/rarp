@@ -55,7 +55,9 @@ might have missed to stumble across this workhorse. A text editor is simply a
 neat tool to edit plain text files. It is like a slimmed-down fast version of
 MS Office for system files. It omits almost all conveniences for the sake of
 speed and low storage. Well, expect you fall in love with Emacs (as I did years
-ago). But that is another story..
+ago). But that is another story.. The last global configuration manipulates the
+output `git log`. If you wanna know what commit logs are type `git help log` or
+page down a while (Note: Maybe this part of the tutorial isn't written yet).
 
 ```
 $ git config --global color.ui true
@@ -65,14 +67,24 @@ $ git config --global format.pretty oneline
 
 ---
 
+To complete the global setting procedure, we want to make sure we are ready to
+roll. To check everything is set up nicely type:
+
+```
+$ git config --list 
+```
+
+You can read the snippet very literally: "Git, return a list of my
+configurations". Your silicon servant will return `color.ui=true`, 
+`core.editior=nvim`... and many more. Alright let's get cracking.
+
 ## Github
 
-Let me start over with a question: Did you already sign up for a GitHub
-account? To use any of its companions is also fine. Yes? Great! In the
-following, I stick with GitHub. Note: Once you understand the general strategy,
-you can easily adapt any snippet to run with, let's say, BitBucket. I really
-prefer its philosophy over GitHub's, but (once more) this is another story.
-We want to dive into practice now! 
+Did you already sign up for a GitHub account? To use any of its companions is
+also fine. Yes? Great! In the following, I stick with GitHub. Note: Once you
+understand the general strategy, you can easily adapt any snippet to run with,
+let's say, BitBucket. I really prefer its philosophy over GitHub's, but (once
+more) this is another story.  We want to dive into practice now! 
 
 As part of good practice we'll use GitHub with SSH. If you haven't set up SSH
 already, read the instructions in `ssh.md` and joint afterwards. Alright, Let's
@@ -286,63 +298,30 @@ unit dies. However, if you wanna be petty the metaphor is incorrect. Git does
 not require to split the portfolio. It duplicates the whole instance instead.
 Neat!
 
-
-#
-# Stop
-#
-
-For the sake of completeness, the folder were your files are at the moment is
-associated with your (local) master branch. Time to push?  Well, keep cool
-young padawan! We're going to initiate the push right now...
-
-In a Nutshell:
+If the remote (repository) is set up correctly its time to pu..pu..pu..push!
+Cool, we're almost done. Don't get too nervous young padawan! Hold on tight and
+enter (with a touch of coolness):
 
 ```
-git push -u 
-
-git add . ; git commit -m "inital commit" ; 
+git push -u origin master
 ```
 
+Once more, try to read the snippet very literally: "Git push my parked stuff
+from my master branch to my origin (on GitHub). We won't fiddle around with the
+`-u` option now. Setting upstream branches is a more advanced topic. 
 
-As I said, git is a revision control system. So first we need to stage the
-files. Therefore we carry the files to a staging area, aka the `INDEX`. Think
-of the staging area as a place were all commits resides before the changes
-
-
-
-
-
-
-
-
-
+But what is this `master` thing? Good question. In Git-ish `master` is the name
+which is associated with your local folder (`test_dir`). More specifically, one
+must add "with specific version of..." (and other linguistic subtleties) -- but
+shhhhh! We don't want to be too petty -- for the sake of understanding. Let's
+focus on the snippet instead. In the sake of the latest insight it simplifies
+as follows: "Git push my staged stuff from my test_dir to its origin (on
+GitHub). That's what we wanna do.
 
 
 
 
 
-
-```
-git log | grep "commit"
-```
-
-You only need the first 10 characters of the hash tag to refer to this commit.
-
-```
-git config format.pretty oneline
-```
-
-```
-git add -i
-```
-
-## Epilogue
-
-Goody:
-
-```
-brew install --cask github
-```
 
 
 
