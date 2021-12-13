@@ -83,11 +83,13 @@ You can read the snippet very literally: "Git, return a list of my
 configurations". Your silicon servant will return `color.ui=true`,
 `core.editior=nvim`... and many more. Alright, let's get cracking.
 
+---
+
 ### Summary
 
-Time to summarize the most important commands of our section. Note If you
-wanna know more about a Git command type `git` verb `help`. For example, if you
-want to get help on `git config` enter: `git help config`. You can type `man
+Time to summarize the most important commands of our section. Note If you wanna
+know more about a Git command type `git` verb `help`. For example, if you want
+to get help on `git config` enter: `git help config`. You can type `man
 git-config`, too. Just make sure to add a dash (`-`). 
 
 | command (snippet) | Description |
@@ -95,6 +97,8 @@ git-config`, too. Just make sure to add a dash (`-`).
 | `git config --global user.name "foo bar"`  | Set your user name globally (i.e., for all projects |
 | `git config --global user.email "foo@bar"` | Set your email address globally (i.e., for all projects) |
 | `git config --list`                        | Show a list of all configurations |
+
+---
 
 ## Github
 
@@ -213,6 +217,8 @@ To prove that Robert kept his word, click the up arrow two times or type:
 cat test_{1..9}
 ```
 
+---
+
 ### Summary
 
 Time to summarize the section's most important commands. Note: Type `man` (for
@@ -230,6 +236,7 @@ what the `touch` command does (or want to get additional info), ask Robert:
 | `cat foo`  | Concatenate a print the content of the file `foo` | 
 | `echo foo`  | Print the word `foo` to the screent | 
 
+---
 
 ### Status? 
 
@@ -297,17 +304,22 @@ you've changed (commit). That's all there is to it! Just Grrrrrr: Initialize a
 again..(r)outine (r)outine (r)outine (r)outine (r)outine (r)outine. The result
 will be a well-documented development process your file(s) went through. Neat!
 
+---
+
 ### Summary
 
-Time to summarize the most important commands of our section. Note If you
+Time to summarize the most important commands of the section. Note: If you
 wanna know more about a Git command type `git` verb `help`. For example, if you
-want to get help on `git config` enter: `git help config`. You can type `man
+want to get help on `git config` type: `git help config`. You can type `man
 git-config`, too. Just make sure to add a dash (`-`). 
+
 
 | Command (snippet) | Description |
 | ----------- | ----------- |
 | `git add foo` |  Add the file `foo` to the staging area |
-| `git commit -m msg` |  Document previous changes with `"msg"` |
+| `git commit -m "msg"` |  Document previous changes with `"msg"` |
+
+---
 
 ### Remotes
 
@@ -375,7 +387,14 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ...you finally made it. Congratulations!
 
+---
+
 ### Summary
+
+Time to summarize the most important commands of the section. Note: If you
+wanna know more about a Git command type `git` verb `help`. For example, if you
+want to get help on `git config` type: `git help config`. You can type `man
+git-config`, too. Just make sure to add a dash (`-`). 
 
 | Git command (snippet) | Description |
 | ----------- | ----------- |
@@ -383,4 +402,6 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 | `git remote -v` | Show all 
 | `git remote -v` | List all remote repositories 
 | `git push -u origin` | Push previous changes to the remote repository `origin` |
+
+---
 
