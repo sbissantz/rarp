@@ -83,6 +83,19 @@ You can read the snippet very literally: "Git, return a list of my
 configurations". Your silicon servant will return `color.ui=true`,
 `core.editior=nvim`... and many more. Alright, let's get cracking.
 
+### Summary
+
+Time to summarize the most important commands of our section. Note If you
+wanna know more about a Git command type `git` verb `help`. For example, if you
+want to get help on `git config` enter: `git help config`. You can type `man
+git-config`, too. Just make sure to add a dash (`-`). 
+
+| command (snippet) | Description |
+| ----------- | ----------- |
+| `git config --global user.name "foo bar"`  | Set your user name globally (i.e., for all projects |
+| `git config --global user.email "foo@bar"` | Set your email address globally (i.e., for all projects) |
+| `git config --list`                        | Show a list of all configurations |
+
 ## Github
 
 Did you already sign up for a GitHub account? ...to use any of its mates is
@@ -200,6 +213,24 @@ To prove that Robert kept his word, click the up arrow two times or type:
 cat test_{1..9}
 ```
 
+### Summary
+
+Time to summarize the section's most important commands. Note: Type `man` (for
+manual) followed by a `command` to get more information about it. You can also
+use `command --help` which prints the help site. For example, if you did forget
+what the `touch` command does (or want to get additional info), ask Robert:
+`man touch` or `touch --help`. 
+
+| Command (snippet) | Description |
+| ----------- | ----------- |
+| `git init` | Initialize an empty git repository in the current directory |
+| `touch`  | Creates an empty file |
+| `mkdir baz`  | Make directory baz | 
+| `pwd`  | Print the path of the current working directory | 
+| `cat foo`  | Concatenate a print the content of the file `foo` | 
+| `echo foo`  | Print the word `foo` to the screent | 
+
+
 ### Status? 
 
 You know dinner for one! "The same procedure as every year". Git is as repetitive as all birthday parties James went through over the years at Miss Sophies. You will see... But now, we'll zoom into her 90th birthday party you all know from television. Remember the most important procedure James has to repeat? The toast! The Git equivalent is `git status`. So before moving on to Sir Toby (when tracking files), Admiral von Schneider (after modifying files), Mr.  Pomeroy (when staging files), and Mr. Winterbottom (after committing files) you will toast (check `git status`). Miss Sophie admits! As I said: "The same procedure!". Skål!...or...
@@ -234,7 +265,7 @@ The story is ridiculous -- I know -- but hopefully, you know what to do next
 story has served its purpose. No? ...just go ahead. 
 
 ```
-git add "test_1"
+git add test_1
 ```
 
 All right, you(r commit) can't wait to get off. So let's buy it a ticket:
@@ -266,6 +297,18 @@ you've changed (commit). That's all there is to it! Just Grrrrrr: Initialize a
 again..(r)outine (r)outine (r)outine (r)outine (r)outine (r)outine. The result
 will be a well-documented development process your file(s) went through. Neat!
 
+### Summary
+
+Time to summarize the most important commands of our section. Note If you
+wanna know more about a Git command type `git` verb `help`. For example, if you
+want to get help on `git config` enter: `git help config`. You can type `man
+git-config`, too. Just make sure to add a dash (`-`). 
+
+| Command (snippet) | Description |
+| ----------- | ----------- |
+| `git status` | Show which files are modified |
+| `git add foo` |  Add the file `foo` to the staging area |
+
 ### Remotes
 
 All right, time to push!? Nope. First, we have to construe a shelter for your
@@ -294,20 +337,7 @@ Double-check it with:
 git remote -v
 ```
 
-`git remote -v` should return something like `origin
-git@github.com:sbissantz/test_dir.git (fetch)` and `origin
-git@github.com:sbissantz/test_dir.git (push)`. To make a long story short, the
-remote repo at GitHub is now the middle of your file solar system. Literally,
-it is its `origin`. The solar metaphor is appropriate especially in terms of
-Gits' "nature". Git is a "distributed version control system" (DVCS). DVCSs
-distribute the content of the remote repository across multiple users. Everyone
-gets a physical (well rather "virtual" or "silicon") clone of the remote
-repository. Why is this helpful? Well, it has a lot in common with the
-principle of risk diversification in stock deals. Distributing the content
-across multiple instances minimizes the risk of a total fallout when a single
-unit dies. However, if you wanna be petty the metaphor is incorrect. Git does
-not require splitting the portfolio. It duplicates the whole instance instead.
-Boom!
+`git remote -v` should return something like `origin git@github.com:sbissantz/test_dir.git (fetch)` and `origin git@github.com:sbissantz/test_dir.git (push)`. To make a long story short, the remote repo at GitHub is now the middle of your file solar system. Literally, it is its `origin`. The solar metaphor is appropriate especially in terms of Gits' "nature". Git is a "distributed version control system" (DVCS). DVCSs distribute the content of the remote repository across multiple users. Everyone gets a physical (well rather "virtual" or "silicon") clone of the remote repository. Why is this helpful? Well, it has a lot in common with the principle of risk diversification in stock deals. Distributing the content across multiple instances minimizes the risk of a total fallout when a single unit dies. However, if you wanna be petty the metaphor is incorrect. Git does not require splitting the portfolio. It duplicates the whole instance instead.  Boom!
 
 If the remote (repository) is set up correctly it's time to pu..pu..pu..push!
 Cool, we're almost done. Don't get too nervous young padawan! Hold on tight and
@@ -332,15 +362,33 @@ like...
 
 ´``
 Enumerating objects: 5, done.
+
 Counting objects: 100% (5/5), done.
+
 Delta compression using up to 8 threads
+
 Compressing objects: 100% (3/3), done.
+
 Writing objects: 100% (3/3), 1.24 KiB | 1.24 MiB/s, done.
+
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+
 To github.com:sbissantz/rarp
-   a3433fc..108b6e1  master -> master
+
+a3433fc..108b6e1  master -> master
+
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ´``
 ...you finally made it. Congratulations!
+
+### Summary
+
+| Git command (snippet) | Description |
+| ----------- | ----------- |
+| `git remote add origin url` | Define `url` as the (new) origin for your stuff |
+| `git remote -v` | Show all 
+| `git remote -v` | List all remote repositories 
+| `git push -u origin` | Push previous changes to the remote repository `origin` |
 
