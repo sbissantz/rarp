@@ -362,23 +362,14 @@ like...
 
 ```
 Enumerating objects: 5, done.
-
 Counting objects: 100% (5/5), done.
-
 Delta compression using up to 8 threads
-
 Compressing objects: 100% (3/3), done.
-
 Writing objects: 100% (3/3), 1.24 KiB | 1.24 MiB/s, done.
-
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
-
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-
 To github.com:sbissantz/rarp
-
 a3433fc..108b6e1  master -> master
-
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 
