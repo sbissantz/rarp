@@ -306,8 +306,8 @@ git-config`, too. Just make sure to add a dash (`-`).
 
 | Command (snippet) | Description |
 | ----------- | ----------- |
-| `git status` | Show which files are modified |
 | `git add foo` |  Add the file `foo` to the staging area |
+| `git commit -m msg` |  Document previous changes with `"msg"` |
 
 ### Remotes
 
@@ -360,7 +360,7 @@ as follows: "Git push my staged stuff from my test_dir to its origin (on
 GitHub). That's what we wanna do. If Robert trumpets out something weird
 like...
 
-´``
+```
 Enumerating objects: 5, done.
 
 Counting objects: 100% (5/5), done.
@@ -380,7 +380,8 @@ To github.com:sbissantz/rarp
 a3433fc..108b6e1  master -> master
 
 Branch 'master' set up to track remote branch 'master' from 'origin'.
-´``
+```
+
 ...you finally made it. Congratulations!
 
 ### Summary
