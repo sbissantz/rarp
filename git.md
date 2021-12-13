@@ -404,4 +404,3 @@ git-config`, too. Just make sure to add a dash (`-`).
 | `git push -u origin` | Push previous changes to the remote repository `origin` |
 
 ---
-
