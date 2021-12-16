@@ -100,7 +100,7 @@ git-config`, too. Just make sure to add a dash (`-`).
 
 ---
 
-## Github
+## GitHub
 
 Did you already sign up for a GitHub account? ...to use any of its mates is
 also fine. Yes? Great!  In the following, I'll stick with GitHub. But once you
@@ -167,7 +167,7 @@ the bright light shining prompt enter:
 mkdir -p test_dir ; cd test_dir
 ```
 
-The snippet creates a directory (`mkdir`) and made it your current working
+The snippet creates a directory (`mkdir`) named (`test_dir`) and made it your current working
 directory (`cd`). Double-check with `pwd` which is the instruction to print the
 current working directory. Robert (your silicon servant) should spit out
 `Users/<username>/test_dir`.
@@ -317,7 +317,7 @@ git-config`, too. Just make sure to add a dash (`-`).
 | Command (snippet) | Description |
 | ----------- | ----------- |
 | `git add foo` |  Add the file `foo` to the staging area |
-| `git commit -m "msg"` |  Document previous changes with `"msg"` |
+| `git commit -m "msg"` |  Document previous changes in `"foo"` with `"msg"` |
 
 ---
 
