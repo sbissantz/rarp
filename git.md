@@ -399,7 +399,6 @@ git-config`, too. Just make sure to add a dash (`-`).
 | Git command (snippet) | Description |
 | ----------- | ----------- |
 | `git remote add origin url` | Define `url` as the (new) origin for your stuff |
-| `git remote -v` | Show all 
 | `git remote -v` | List all remote repositories 
 | `git push -u origin` | Push previous changes to the remote repository `origin` |
 
