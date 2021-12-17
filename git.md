@@ -126,7 +126,9 @@ If the command does not work (or if you have to specify a server) try...
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 ```
 
-## Test
+---
+
+## Test... 1,.. 2,.. 1, 2, 3
 
 Time to testify that GitHub knows who you are. Remember the Clemens Stacy love
 story in `ssh.md`? Scene 3: Clemens makes sure Stacy gave him the correct
@@ -155,7 +157,9 @@ for certain (a) SSH is working and (b) GitHub knows who we are.
 
 Please note --right off the start-- the following introduction is a shorty.  It won't tackle the topic with full strength. Instead, the tutorial presents Git in a nutshell. You should be able to jump right off the ground. Nothing more than that! With this in mind, let's get started.
 
-### T-t-terminal Terminal
+---
+
+### T-t-terminal, terminal!
 
 To control your revisions, you need something substantial. Let's say a
 directory. Because we are reborn nerds, we'll use the terminal, Hands off the
@@ -238,13 +242,15 @@ what the `touch` command does (or want to get additional info), ask Robert:
 
 ---
 
-### Status? 
+### Status? Check 1..2..3
 
-You know dinner for one! "The same procedure as every year". Git is as repetitive as all birthday parties James went through over the years at Miss Sophies. You will see... But now, we'll zoom into her 90th birthday party you all know from television. Remember the most important procedure James has to repeat? The toast! The Git equivalent is `git status`. So before moving on to Sir Toby (when tracking files), Admiral von Schneider (after modifying files), Mr.  Pomeroy (when staging files), and Mr. Winterbottom (after committing files) you will toast (check `git status`). Miss Sophie admits! As I said: "The same procedure!". Skål!...or...
+You know dinner for one! "The same procedure as every year". Git is as repetitive as all birthday parties James went through over the years at Miss Sophies. You will see... But now, we'll zoom into her 90th birthday party you all know from television. Remember the most important procedure James has to repeat? The toast! The Git equivalent is `git status`. So before moving on to Sir Toby (when tracking files), Admiral von Schneider (after modifying files), Mr.  Pomeroy (when staging files), and Mr. Winterbottom (after committing files) you will toast (check `git status`). Miss Sophie admits! As I said: "The same procedure...!". Skål!...or...
 
 ```
 git status
 ```
+
+---
 
 ### Staging & committing 
 
@@ -321,7 +327,7 @@ git-config`, too. Just make sure to add a dash (`-`).
 
 ---
 
-### Remotes
+### Remotes and other spheres
 
 All right, time to push!? Nope. First, we have to construe a shelter for your
 files online: a remote repository. Besides, we have to indicate its location
@@ -367,9 +373,9 @@ But what is this `master` thing? Good question. In Git-ish `master` is the name
 which is associated with your local folder (`test_dir`). More specifically, one
 must add "with a specific version of..." (and other linguistic subtleties) --
 but shhh! We don't want to be too petty -- for the sake of understanding. Let's
-focus on the snippet instead. For the sake of the latest insight, it simplifies
-as follows: "Git push my staged stuff from my test_dir to its origin (on
-GitHub). That's what we wanna do. If Robert trumpets out something weird
+focus on the snippet instead. From the background of the latest insight, it
+simplifies as follows: "Git push my staged stuff from my test_dir to its origin
+(on GitHub). That's what we wanna do. If Robert trumpets out something weird
 like...
 
 ```
