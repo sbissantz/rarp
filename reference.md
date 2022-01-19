@@ -4,6 +4,8 @@
 
 ## Tracking branches
 
+The most general
+
 `$ git checkout -b <branch> <remote>/<branch>`
 `$ git switch -c <branch> <remote>/<branch>`
 
@@ -27,16 +29,15 @@ If you want to set up a local <branch> to track the <remote>/<branch> then you
 can hack the following formula into the machine:
 
 ```
-git branch -u <remote>/<branch> <branch> 
+git branch -u <remote>/<branch> <local_branch> 
 ```
 
-Read it as: The local `branch` is set up to be the tracking branch for the
-`<remote>/<branch>`. However, we should not neglect the little `-u` option
+Read it as: The `<local_branch>` `branch` is set up to be the tracking branch
+for the `<remote>/<branch>`. However, we should not omit the little `-u` option
 which is a shorty for `--set-upstream`. So a more direct translation would be:
-Set up `<remote>/<branch>` as upstream branch for `<branch>`.
-
-Besides, the snippet obviously comes in handy if the name of the local branch
-differs from the one on the remote repository, for example:
+Set up `<remote>/<branch>` as upstream branch for `<local_branch>`. The snippet
+comes in handy if the name of the local branch differs from the one on the
+remote repository, for example:
 
 ```
 $ git branch -u origin origin/new_features experimental
@@ -47,6 +48,7 @@ Branch 'experimental' set up to track remote branch 'new_feature' from
 If you want to save yourself a little typing, then you can also an equivalent
 shorty for above's snippet. This holds, if the branch on the remote should be 
 tracked by a local branch with the same name. Then the snippet simplifies to.
+
 
 ```
 git branch -u <remote>/<branch>
@@ -75,9 +77,6 @@ git switch -c <branch> <remote>/<branch>
 
 
 
-
-
-
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 
@@ -95,10 +94,11 @@ equal
 git branch -u origin/serverfix
 
 
+* serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] This should do it
 
+    [origin/iss53: ahead 2]
 
-
-
+[teamone/server-fix-good: ahead 3, behind 1]
 
 
 ## Pushing branches
