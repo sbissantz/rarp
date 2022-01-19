@@ -73,34 +73,6 @@ git switch -c <branch> <remote>/<branch>
 ```
 
 
-
-
-
-
-Branch 'master' set up to track remote branch 'master' from 'origin'.
-
-
-
-
-Obviously this is helpful, when you want to 
-
-This seems redundant, since there are two `<branch>`es and if you the names are
-equal
-
-
-
-
-
-git branch -u origin/serverfix
-
-
-* serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] This should do it
-
-    [origin/iss53: ahead 2]
-
-[teamone/server-fix-good: ahead 3, behind 1]
-
-
 ## Pushing branches
 
 There are three global option which might help with the upstream-branch
@@ -117,3 +89,23 @@ for additional advice:
 git config --global push.default simple
 
 ```
+
+```
+git push -u origin/master master
+```
+
+In the first tutorial I took `git push -u origin master` for granted. Since we
+now know a little more about tracking branches, we can dig a little deeper.
+`git push -u origin master` does two things: first, it pushes your staged
+changes from your local branch `master` to your remote `origin`. Second, it
+commissions `master` to track the remote branch `origin/master`. Or, to put it
+another way, it sets `origin/master` as upstream branch for your local branch
+`master`. Following this logic, you can also push changes from your local
+`master` branch to another remote branch on your server, while at the same time
+defining the upstream/tracking branch.
+
+
+
+
+
+
