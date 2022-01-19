@@ -91,7 +91,7 @@ git config --global push.default simple
 ```
 
 ```
-git push -u origin/master master
+git push -u origin master
 ```
 
 In the first tutorial I took `git push -u origin master` for granted. Since we
@@ -100,12 +100,5 @@ now know a little more about tracking branches, we can dig a little deeper.
 changes from your local branch `master` to your remote `origin`. Second, it
 commissions `master` to track the remote branch `origin/master`. Or, to put it
 another way, it sets `origin/master` as upstream branch for your local branch
-`master`. Following this logic, you can also push changes from your local
-`master` branch to another remote branch on your server, while at the same time
-defining the upstream/tracking branch.
-
-
-
-
-
+`master`. 
 
