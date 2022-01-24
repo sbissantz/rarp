@@ -15,3 +15,13 @@
 (12) Pull Request ausfüllen
 (13) Absenden
 (14) fertisch!
+
+
+# Rebase
+#
+
+Often, you’ll do this to make sure your commits apply cleanly on a remote branch — perhaps in a project to which you’re trying to contribute but that you don’t maintain. In this case, you’d do your work in a branch and then rebase your work onto origin/master when you were ready to submit your patches to the main project. That way, the maintainer doesn’t have to do any integration work — just a fast-forward or a clean apply.
+
+
+
+
