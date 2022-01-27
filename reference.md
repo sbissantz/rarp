@@ -11,7 +11,7 @@
 | `git config --list` | View all configurations (in all config files) |
 | `git config --list --show-origin` | View all configurations and the files were they live |
 | `git config --global user.name "Jack Sparrow"` | Make `Jack Sparrow` your global user's id (`.gitconfig`) |
-| `git config --global user.email "jack@sparrow.com"` | Make `jack@sparrow.com` your global user's mail address (`.gitconfig`) |
+| `git config --global user.email jack@sparrow.com` | Make `jack@sparrow.com` your global user's mail address (`.gitconfig`) |
 | `git config --global core.editor <editor>"` | Make `<editor>` your global user's default text editor (`.gitconfig`) |
 | `git config --global init.defaultBranch <branch>"` | Make `<branch>` your global user's default initialization branch (`.gitconfig`) |
 
