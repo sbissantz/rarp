@@ -2,6 +2,33 @@
 
 ==
 
+# git config
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git config <key>` | View the configuration behind a `<key>` |
+| `git config --show-origin <key>` | View the location of the `<key>` configuration | 
+| `git config --list` | View all configurations (in all config files) |
+| `git config --list --show-origin` | View all configurations and the files were they live |
+| `git config --global user.name "Jack Sparrow"` | Make `Jack Sparrow` your global user's id (`.gitconfig`) |
+| `git config --global user.email "jack@sparrow.com"` | Make `jack@sparrow.com` your global user's mail address (`.gitconfig`) |
+| `git config --global core.editor <editor>"` | Make `<editor>` your global user's default text editor (`.gitconfig`) |
+| `git config --global init.defaultBranch <branch>"` | Make `<branch>` your global user's default initialization branch (`.gitconfig`) |
+
+---
+
+# git init
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git init` | Re-/initialize a git repository in the current directory |
+| `git init <dir/>` | Re-/Initialize a git repository in `<dir/>` |
+
+
+
+
+
+
 ## Tracking branches
 
 The most general
