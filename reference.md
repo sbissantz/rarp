@@ -1,6 +1,6 @@
 # Command reference
 
-==
+---
 
 # git config
 
@@ -17,6 +17,17 @@
 
 ---
 
+# git help
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git help <verb>` | Get help with `<verb>` |
+| `git <verb> --help` | Get help with `<verb>` |
+| `man git-<verb>` | See `<verb>`'s man page |
+| `git <verb> -h` | List all options for `<verb>` |
+
+---
+
 # git init
 
 | Syntax | Description |
@@ -24,10 +35,45 @@
 | `git init` | Re-/initialize a git repository in the current directory |
 | `git init <dir/>` | Re-/Initialize a git repository in `<dir/>` |
 
+---
 
+# git add
 
+| Syntax | Description |
+| ------ | ----------- |
+| `git add <untracked_file>` |  Start tracking the `<untracked_file>` |
+| `git add <file_1> <file_2>` | Start tracking the *untracked* files -- `<file_1>`, `<file_2>` |
+| `git add -i` |  Start tracking files interactively |
+| `git add .` |  Start tracking all untracked files in the current directory |
+| `git add *` |  Start tracking all untracked files |
+| `git add *.c` |  Start tracking all untracked with a `.c` suffix  |
+| ------ | ----------- |
+| `git add <modified_file>` |  Stage the `<modified_file>` (i.e., add it to the index or the "staging area") |
+| `git add <file_1> <file_2>` | Stage the two *modified* files -- `<file_1>`, `<file_2>` |
+| `git add -i` |  Stag modified files interactively |
+| `git add .` |  Stage all modified files of the current directory |
+| `git add *` |  Stage all modified files in your working directory |
+| `git add *.c` |  Stage all modified files with a `.c` suffix  |
 
+---
 
+# git commit
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git commit` | Commit all staged files (with a message from core.editor) |
+| `git commit -m <message>` | Commit all stages files with `<message>` |
+
+---
+
+# git clone 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git clone <url>` | Clone the repository from `<url>` |
+| `git clone <url> <dir/>` | Clone the repository from `<url>` into `<dir/>` |
+
+---
 
 ## Tracking branches
 
