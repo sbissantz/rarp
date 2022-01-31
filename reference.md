@@ -37,6 +37,15 @@
 
 ---
 
+# git status
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git status` | Check the state of your files (e.g., un-/tracked, un/-modified, un-/staged) |
+| `git status --short` | Check the state of your files in a short format |
+
+---
+
 # git add
 
 | Syntax | Description |
@@ -72,6 +81,38 @@
 | ------ | ----------- |
 | `git clone <url>` | Clone the repository from `<url>` |
 | `git clone <url> <dir/>` | Clone the repository from `<url>` into `<dir/>` |
+
+---
+
+# git diff 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git diff` | Show all unstaged changes |
+| `git diff <file>` | Show all unstaged changes in a `<file>` |
+| `git diff --staged` | Show all staged changes that are part of the next commit |
+| `git diff --cached` | Show all staged changes that are part of the next commit |
+
+---
+
+# git rm
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git rm <file>` | Remove an unstaged `<file>` from your working directory |
+| `git rm <pattern>` | Remove all unstaged files from your working directory that match the `<pattern>` |
+| `git rm \*` | Remove all unstaged files from your working directory 
+| `git rm -f <file>` | Remove a staged `<file>` from your working directory |
+| `git rm --cached <file>` | Remove a `<file>` from the staging area (i.e., keep it in your working directory, but stop tracking it) | 
+
+---
+
+# git mv 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git mv <bad_file> <good_file>` | Rename `<bad_file>` to `<good_file>` |
+| `git mv <file> </somedir/else/file>` | Move `<file>` to `</somedir/else/file>` |
 
 ---
 
