@@ -10,8 +10,9 @@
 | `git config --show-origin <key>` | View the location of the `<key>` configuration | 
 | `git config --list` | View all configurations (in all config files) |
 | `git config --list --show-origin` | View all configurations and the files were they live |
-| `git config --global user.name "Jack Sparrow"` | Make `Jack Sparrow` your global user's id (`.gitconfig`) |
-| `git config --global user.email jack@sparrow.com` | Make `jack@sparrow.com` your global user's mail address (`.gitconfig`) |
+| ------ | ----------- |
+| `git config --global user.name "foo bar"` | Make `foo bar` your global user's id (`.gitconfig`) |
+| `git config --global user.email foo@bar.com` | Make `foo@bar.com` your global user's mail address (`.gitconfig`) |
 | `git config --global core.editor <editor>"` | Make `<editor>` your global user's default text editor (`.gitconfig`) |
 | `git config --global init.defaultBranch <branch>"` | Make `<branch>` your global user's default initialization branch (`.gitconfig`) |
 
@@ -32,8 +33,8 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git init` | Re-/initialize a git repository in the current directory |
-| `git init <dir/>` | Re-/Initialize a git repository in `<dir/>` |
+| `git init` | Re-/initialize a git repo in the current directory |
+| `git init <dir/>` | Re-/Initialize a git repo in `<dir/>` |
 
 ---
 
@@ -50,7 +51,7 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git add <untracked_file>` |  Start tracking the `<untracked_file>` |
+| `git add <untracked_file>` |  Start tracking `<untracked_file>` |
 | `git add <file_1> <file_2>` | Start tracking the *untracked* files -- `<file_1>`, `<file_2>` |
 | `git add -i` |  Start tracking files interactively |
 | `git add .` |  Start tracking all untracked files in the current directory |
@@ -79,8 +80,8 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git clone <url>` | Clone the repository from `<url>` |
-| `git clone <url> <dir/>` | Clone the repository from `<url>` into `<dir/>` |
+| `git clone <url>` | Clone the repo from `<url>` |
+| `git clone <url> <dir/>` | Clone the repo from `<url>` into `<dir/>` |
 
 ---
 
@@ -89,7 +90,7 @@
 | Syntax | Description |
 | ------ | ----------- |
 | `git diff` | Show all unstaged changes |
-| `git diff <file>` | Show all unstaged changes in a `<file>` |
+| `git diff <file>` | Show all unstaged changes in `<file>` |
 | `git diff --staged` | Show all staged changes that are part of the next commit |
 | `git diff --cached` | Show all staged changes that are part of the next commit |
 
@@ -99,11 +100,11 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git rm <file>` | Remove an unstaged `<file>` from your working directory |
-| `git rm <pattern>` | Remove all unstaged files from your working directory that match the `<pattern>` |
-| `git rm \*` | Remove all unstaged files from your working directory 
-| `git rm -f <file>` | Remove a staged `<file>` from your working directory |
-| `git rm --cached <file>` | Remove a `<file>` from the staging area (i.e., keep it in your working directory, but stop tracking it) | 
+| `git rm <file>` | Remove the unstaged `<file>` from your WD |
+| `git rm <pattern>` | Remove all unstaged files from your WD that match the `<pattern>` |
+| `git rm \*` | Remove all unstaged files from your WD 
+| `git rm -f <file>` | Remove a staged `<file>` from your WD |
+| `git rm --cached <file>` | Stop tracking a file (i.e., remove `<file>` from the staging area, but keep it in your WD | 
 
 ---
 
@@ -115,6 +116,22 @@
 | `git mv <file> </somedir/else/file>` | Move `<file>` to `</somedir/else/file>` |
 
 ---
+
+# git log
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git log` |  |
+| `git log` |  |
+| `git log` |  |
+| `git log` |  |
+
+---
+
+
+
+
+
 
 ## Tracking branches
 
