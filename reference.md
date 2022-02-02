@@ -10,7 +10,7 @@
 | `git config --show-origin <key>` | View the location of the `<key>` configuration | 
 | `git config --list` | View all configurations (in all config files) |
 | `git config --list --show-origin` | View all configurations and the files were they live |
-| ------ | ----------- |
+|  |  |
 | `git config --global user.name "foo bar"` | Make `foo bar` your global user's id (`.gitconfig`) |
 | `git config --global user.email foo@bar.com` | Make `foo@bar.com` your global user's mail address (`.gitconfig`) |
 | `git config --global core.editor <editor>"` | Make `<editor>` your global user's default text editor (`.gitconfig`) |
@@ -57,7 +57,7 @@
 | `git add .` |  Start tracking all untracked files in the current directory |
 | `git add *` |  Start tracking all untracked files |
 | `git add *.c` |  Start tracking all untracked with a `.c` suffix  |
-| ------ | ----------- |
+|  |  |
 | `git add <modified_file>` |  Stage the `<modified_file>` (i.e., add it to the index or the "staging area") |
 | `git add <file_1> <file_2>` | Stage the two *modified* files -- `<file_1>`, `<file_2>` |
 | `git add -i` |  Stag modified files interactively |
@@ -121,13 +121,22 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git log` |  |
-| `git log` |  |
-| `git log` |  |
-| `git log` |  |
+| `git log` | Show each commit log |
+| `git log -<n>` | Show each of the last `<n>` commit logs  |
+| `git log -p` | Show the patch introduced with each commit (i.e., the within-file differences |
+| `git log -<n> -p` | Show the patch introduced in each commit for each of the last `<n>` commit logs |
+| `git log --stat` | Show the commit logs statistic (i.e., a list of each file changed; where added/removed lines are indicated by `++++/---`) |
+| `git log --shortstat` | Show a short commit logs statistic (e.g., `3 files changed, 41 insertions(+), 3 deletions(-)`)
+| `git log --pretty=oneline` | Show the commit logs in a prettified one-line format (e.g., abbreviated SHA-1 hashes) |
+| `git log --oneline` | Show the commit logs in a one-line format (e.g., abbreviated SHA-1 hashes) |
+| `git log --graph` | Add an ASCII graph for the branch and merge history to the commit log history |
+| `git log --oneline --graph` | Show the commit logs in a one-line format and add an ASCII graph for the branch and merge history |
+
+
+
+
 
 ---
-
 
 
 
