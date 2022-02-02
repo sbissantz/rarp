@@ -123,6 +123,8 @@
 | ------ | ----------- |
 | `git log` | Show each commit log |
 | `git log -<n>` | Show each of the last `<n>` commit logs  |
+| `git log -1` | Show the last commit log  |
+| `git log -1 HEAD` | Show the last commit log of the branch indicated by `HEAD` (i.e., the pointer to the current branch) |
 | `git log -p` | Show the patch introduced with each commit (i.e., the within-file differences |
 | `git log -<n> -p` | Show the patch introduced in each commit for each of the last `<n>` commit logs |
 | `git log --stat` | Show the commit logs statistic (i.e., a list of each file changed; where added/removed lines are indicated by `++++/---`) |
