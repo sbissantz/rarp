@@ -125,24 +125,46 @@
 | `git log -<n>` | Show each of the last `<n>` commit logs  |
 | `git log -1` | Show the last commit log  |
 | `git log -1 HEAD` | Show the last commit log of the branch indicated by `HEAD` (i.e., the pointer to the current branch) |
-| `git log -p` | Show the patch introduced with each commit (i.e., the within-file differences |
+| `git log -p` | Show the patch introduced with each commit (i.e., within-file differences) |
 | `git log -<n> -p` | Show the patch introduced in each commit for each of the last `<n>` commit logs |
-| `git log --stat` | Show the commit logs statistic (i.e., a list of each file changed; where added/removed lines are indicated by `++++/---`) |
-| `git log --shortstat` | Show a short commit logs statistic (e.g., `3 files changed, 41 insertions(+), 3 deletions(-)`)
+| `git log --stat` | Show the commit logs statistic (i.e., if a file changed; and if so the lines added/removed `++++/---`) |
+| `git log --shortstat` | Show a short commit logs statistic (i.e., only the changed/insertions/deletions line from the `--stat` command )
 | `git log --pretty=oneline` | Show the commit logs in a prettified one-line format (e.g., abbreviated SHA-1 hashes) |
 | `git log --oneline` | Show the commit logs in a one-line format (e.g., abbreviated SHA-1 hashes) |
 | `git log --graph` | Add an ASCII graph for the branch and merge history to the commit log history |
 | `git log --oneline --graph` | Show the commit logs in a one-line format and add an ASCII graph for the branch and merge history |
+|  |  |
+| `git log --since="<date>"` | Show commit logs since `<date>` (e.g. `1 year 2 monts 3 weeks, 4 days`) |
+| `git log --since <date>` | Show commit logs since `<date>` (e.g. `2.weeks, 2008-03-22"`) |
+| `git log --after="<date>"` | Show commit logs after `<date>` |
+| `git log --after <date>` | Show commit logs since `<date>` |
+| `git log --until="<date>"` | Show commit logs until `<date>` |
+| `git log --until <date>` | Show commit logs until `<date>` | 
+| `git log --before="<date>"` | Show commit logs before `<date>` |
+| `git log --before <date>` | Show commit logs until `<date>` | 
+|  |  |
+| `git log -S <string>` | Show only commits where a `<string>` within a file changed (e.g., to monitor the changes of a function ) |
+| `git log --grep <string>` | Show only commit messages containing `<string>` |
+| `git log -- <path/to/file>` | Show only commit logs for a `<(path/to/)file>`  |
 
 
 
 
+Look for differences that change the number of occurrences of the
+           specified string (i.e. addition/deletion) in a file. Intended for the
+           scripter’s use.
+
+
+|  |  |
+| `git logcial` | My alias for a log(ical) commit history output -- 
+
+You can add the `logical` alias to your `.gitconfig` using by either using `git
+config --global alias.<shorty> <command>. ` or adding `logical = log --color
+--graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)
+%C(bold blue)<%an>%Creset' --abbrev-commit` manually -- under `[alias]`-- to
+your git configuration file.
 
 ---
-
-
-
-
 
 ## Tracking branches
 
