@@ -143,12 +143,14 @@
 | `git log --before="<date>"` | Show commit logs before `<date>` |
 | `git log --before <date>` | Show commit logs until `<date>` | 
 |  |  |
-| `git log -S <string>` | Show only commits where a `<string>` within a file changed (e.g., to monitor the changes of a function ) |
+| `git log -S <string>` | Show only commits where a `<string>` within the code changed (e.g., to monitor the changes of a function ) |
 | `git log --grep <string>` | Show only commit messages containing `<string>` |
 | `git log -- <path/to/file>` | Show only commit logs for a `<(path/to/)file>`  |
+|  |  |
+| `git log --author='<author>'` | Show only commit from `<author>`  |
+| `git log --committer='<author>'` | Show only commit from `<committer>`  |
 
-
-
+---
 
 Look for differences that change the number of occurrences of the
            specified string (i.e. addition/deletion) in a file. Intended for the
