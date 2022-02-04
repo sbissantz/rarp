@@ -71,8 +71,10 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git commit` | Commit all staged files (with a message from core.editor) |
+| `git commit` | Commit all staged files (with a message from `core.editor`) |
 | `git commit -m <message>` | Commit all stages files with `<message>` |
+| `git commit --amend` | Amend the previous commit message (to a message from `core.editor`) |
+| `git commit --amend -m <message>` | Amend the previous commit message to `<message>` |
 
 ---
 
@@ -80,7 +82,7 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git clone <url>` | Clone the repo from `<url>` |
+| `git clone <url>` | Clone the repo from `<url>` (i.e., into a directory named like the word last word in the `<url>` or the word before the `.git` prefix in the `<url>`) |
 | `git clone <url> <dir/>` | Clone the repo from `<url>` into `<dir/>` |
 
 ---
@@ -149,6 +151,46 @@
 |  |  |
 | `git log --author='<author>'` | Show only commit from `<author>`  |
 | `git log --committer='<author>'` | Show only commit from `<committer>`  |
+
+---
+
+# git restore (git reset) 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git restore <file>` | Unmodify a modified `<file>` |
+| `git reset HEAD <file>` | Unstage a staged `<file>` |
+| `git restore --staged <file>` | Unstage a staged `<file>` |
+
+---
+
+# git remote 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git remote` | Show the remote shortnames |
+| `git remote -v` | Show the remote shortnames & the remote urls  |
+| `git remote -vv` | Show which tracking branches are set |
+| | |
+
+
+---
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git fetch` |  |
+| `git fetch <remote>` |  |
+
+
+---
+
+# git checkout 
+
+| `git checkout -- <file>` | Unmodify a modified `<file>` |
+
+---
+
+# git switch 
 
 ---
 
