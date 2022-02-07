@@ -171,16 +171,38 @@
 | `git remote` | Show the remote shortnames |
 | `git remote -v` | Show the remote shortnames & the remote urls  |
 | `git remote -vv` | Show which tracking branches are set |
+| `git remote show <remote>` | Get extensive info about `<remote>` (i.e., HEAD, remote references, remote branch(es), tracking branch(es), push & pull info) |
 | | |
-
+| `git remote add <remote> <url>` | Add `<remote>` under `<url>` |
+| `git remote rename <old_remote> <new_remote>` | Rename `<old_remote>` to `<new_remote>` (Note: does also change the names of remote-tracking branches) |
+| `git remote remove <remote>` | Remove `<remote>` to `<new_remote>` (Note: does also change the names of remote-tracking branches) |
 
 ---
 
+# git fetch
+
 | Syntax | Description |
 | ------ | ----------- |
-| `git fetch` |  |
-| `git fetch <remote>` |  |
+| `git fetch` | Fetch all info (from the specified remote tracking branch, see: `fetch URL`) |
+| `git fetch <remote>` | Synchronize your localdb with `<remote>` |
 
+---
+
+# git pull 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git pull` | Fetch & merge all info (from the specified remote tracking branch, see `fetch URL`)  |
+| `git pull <remote>` | Fetch all changes from `<remote>` and merge it into your localdb |
+
+---
+
+# git pull 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git push <remote> <branch>` | Push local changes from `<branch>` into `<remote>/<branch>`  |
+| `git push <remote> <local_branch>:<branch>` | Push the changes from `<local_branch>` into a differently named `<remote>/<branch>` |
 
 ---
 
