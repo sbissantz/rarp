@@ -197,12 +197,15 @@
 
 ---
 
-# git pull 
+# git push 
 
 | Syntax | Description |
 | ------ | ----------- |
+| `git push` | Push local changes (from the current branch into the upstream branch -- remote/branch)  |
 | `git push <remote> <branch>` | Push local changes from `<branch>` into `<remote>/<branch>`  |
 | `git push <remote> <local_branch>:<branch>` | Push the changes from `<local_branch>` into a differently named `<remote>/<branch>` |
+| `git push --tags` | Push local tags (from the current branch into the upstream branch -- remote/branch)  |
+| `git push <remote> --tags` | Push local tags from the current branch into remote/branch)  |
 
 ---
 
@@ -215,6 +218,31 @@
 # git switch 
 
 ---
+
+# git tag 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git tag` | List all tags (of the current repo) |
+| `git tag -l <pattern>` | Search for tags including `<pattern>` List all tags (of the current repo) |
+| | |
+| `git tag <tag_lw>` | Create a lightweight `<tag_lw>` (for the latest commit)  |
+| `git tag -a <tag>` | Create an annotated `<tag>` (for the latest commit; i.e., SHA-1 hash; tagger name, email, date; tagging message; GPG signature) |
+| `git tag -a <tag> <commit>` | Create an annotated `<tag>` for a particular `<commit>` |
+| `git tag <tag_lw> <commit>` | Create a lightweight `<tag_lw>` for a particular `<commit>`  |
+
+---
+
+# git show 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git show <object>` | Shows info about `<object>` |
+| `git show <tag>` | Shows info about `<tag>` (i.e., SHA-1 hash; tagger name, email, date; tagging message; GPG signature) |
+| | |
+| | |
+
+
 
 Look for differences that change the number of occurrences of the
            specified string (i.e. addition/deletion) in a file. Intended for the
