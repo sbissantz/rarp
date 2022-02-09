@@ -15,6 +15,7 @@
 | `git config --global user.email foo@bar.com` | Make `foo@bar.com` your global user's mail address (`.gitconfig`) |
 | `git config --global core.editor <editor>"` | Make `<editor>` your global user's default text editor (`.gitconfig`) |
 | `git config --global init.defaultBranch <branch>"` | Make `<branch>` your global user's default initialization branch (`.gitconfig`) |
+| `git config --global alias.<alias> <command>"` | Set up an `<alias>` for a `<command>` (`.gitconfig`) |
 
 ---
 
@@ -158,8 +159,9 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git restore <file>` | Unmodify a modified `<file>` |
 | `git reset HEAD <file>` | Unstage a staged `<file>` |
+| | |
+| `git restore <file>` | Unmodify a modified `<file>` |
 | `git restore --staged <file>` | Unstage a staged `<file>` |
 
 ---
@@ -204,18 +206,34 @@
 | `git push` | Push local changes (from the current branch into the upstream branch -- remote/branch)  |
 | `git push <remote> <branch>` | Push local changes from `<branch>` into `<remote>/<branch>`  |
 | `git push <remote> <local_branch>:<branch>` | Push the changes from `<local_branch>` into a differently named `<remote>/<branch>` |
+| | |
 | `git push --tags` | Push local tags (from the current branch into the upstream branch -- remote/branch)  |
-| `git push <remote> --tags` | Push local tags from the current branch into remote/branch)  |
+| `git push <remote> <tag>` | Push a local tag into `<remote>` |
+| `git push <remote> --tags` | Push all local tags (`refs/tags`) into `<remote>` |
+| | |
+| `git push <remote> --delete` | Delete all locally removed tag on `<remote>`, too   |
+| `git push <remote> --delete <tag>` | Delete the locally removed `<tag> `on `<remote>`, too   |
+| `git push <remote> --delete :refs/tags/<tag>` | Delete the locally removed `<tag> `on `<remote>`, too   |
 
 ---
 
 # git checkout 
 
 | `git checkout -- <file>` | Unmodify a modified `<file>` |
+| | |
+| `git checkout <tag>` | Checkout the versions of files `<tag>` is pointing to (Important: Puts you in the detached HEAD state)|
+| `git checkout -b <branch> <tag>` | Checkout the versions of files `<tag>` is pointing to in `<branch>` |
 
 ---
 
 # git switch 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git switch -`  | Switch back to the previous branch |
+| | |
+| `git switch <tag>` | Checkout the versions of files `<tag>` is pointing to (Important: Puts you in the detached HEAD state)|
+| `git switch -c <branch> <tag>` | Checkout the versions of files `<tag>` is pointing to in `<branch>` |
 
 ---
 
@@ -230,6 +248,8 @@
 | `git tag -a <tag>` | Create an annotated `<tag>` (for the latest commit; i.e., SHA-1 hash; tagger name, email, date; tagging message; GPG signature) |
 | `git tag -a <tag> <commit>` | Create an annotated `<tag>` for a particular `<commit>` |
 | `git tag <tag_lw> <commit>` | Create a lightweight `<tag_lw>` for a particular `<commit>`  |
+| | |
+| `git tag -d <tag>` | Delete `<tag>` |
 
 ---
 
@@ -240,17 +260,15 @@
 | `git show <object>` | Shows info about `<object>` |
 | `git show <tag>` | Shows info about `<tag>` (i.e., SHA-1 hash; tagger name, email, date; tagging message; GPG signature) |
 | | |
-| | |
 
+---
 
+# git mine
 
-Look for differences that change the number of occurrences of the
-           specified string (i.e. addition/deletion) in a file. Intended for the
-           scripter’s use.
-
-
-|  |  |
-| `git logcial` | My alias for a log(ical) commit history output -- 
+| `git unstage <file>` | `git reset -- HEAD <file>` | Alias to unstage a staged `<file>` |
+| `git last` | `git log -1 HEAD` | Alias to view the last commit | 
+| `git visual` | `!gitk` | Alias for a visual git interface | 
+| `git logcial` | `git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit` | Alias for a log(ical) commit history output |
 
 You can add the `logical` alias to your `.gitconfig` using by either using `git
 config --global alias.<shorty> <command>. ` or adding `logical = log --color
