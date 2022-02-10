@@ -76,6 +76,8 @@
 | `git commit -m <message>` | Commit all stages files with `<message>` |
 | `git commit --amend` | Amend the previous commit message (to a message from `core.editor`) |
 | `git commit --amend -m <message>` | Amend the previous commit message to `<message>` |
+| `git commit -a <message>` | Stage and commit all  modified files (with a message from `core.editor`) |
+| `git commit -a -m <message>` | Stage and commit all modified files with `<message>` |
 
 ---
 
@@ -135,7 +137,9 @@
 | `git log --pretty=oneline` | Show the commit logs in a prettified one-line format (e.g., abbreviated SHA-1 hashes) |
 | `git log --oneline` | Show the commit logs in a one-line format (e.g., abbreviated SHA-1 hashes) |
 | `git log --graph` | Add an ASCII graph for the branch and merge history to the commit log history |
+| `git log --decorate` | Add all of the references (e.g., tags, branches, etc.) to the commit logs |
 | `git log --oneline --graph` | Show the commit logs in a one-line format and add an ASCII graph for the branch and merge history |
+| `git log --oneline --decorate --graph --all` | Get an all-in-one supple commit-log output (..look above for details) |
 |  |  |
 | `git log --since="<date>"` | Show commit logs since `<date>` (e.g. `1 year 2 monts 3 weeks, 4 days`) |
 | `git log --since <date>` | Show commit logs since `<date>` (e.g. `2.weeks, 2008-03-22"`) |
@@ -222,6 +226,8 @@
 | `git checkout -- <file>` | Unmodify a modified `<file>` |
 | | |
 | `git checkout <tag>` | Checkout the versions of files `<tag>` is pointing to (Important: Puts you in the detached HEAD state)|
+| `git checkout <branch>` | Checkout `<branch>` | 
+| `git checkout -b <branch>` | Create and checkout `<branch>` | 
 | `git checkout -b <branch> <tag>` | Checkout the versions of files `<tag>` is pointing to in `<branch>` |
 
 ---
@@ -233,6 +239,8 @@
 | `git switch -`  | Switch back to the previous branch |
 | | |
 | `git switch <tag>` | Checkout the versions of files `<tag>` is pointing to (Important: Puts you in the detached HEAD state)|
+| `git switch <branch>` | Checkout `<branch>` | 
+| `git switch -c <branch>` | Create and checkout `<branch>` | 
 | `git switch -c <branch> <tag>` | Checkout the versions of files `<tag>` is pointing to in `<branch>` |
 
 ---
@@ -260,6 +268,19 @@
 | `git show <object>` | Shows info about `<object>` |
 | `git show <tag>` | Shows info about `<tag>` (i.e., SHA-1 hash; tagger name, email, date; tagging message; GPG signature) |
 | | |
+
+---
+
+# git show 
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git branch <branch>`| Create a new `branch` |
+
+
+
+
+
 
 ---
 
@@ -348,7 +369,6 @@ The get a two in one version of the snippet you can use `switch` with the
 git switch -c <branch> <remote>/<branch>
 ```
 
-
 ## Pushing branches
 
 There are three global option which might help with the upstream-branch
@@ -377,4 +397,16 @@ changes from your local branch `master` to your remote `origin`. Second, it
 commissions `master` to track the remote branch `origin/master`. Or, to put it
 another way, it sets `origin/master` as upstream branch for your local branch
 `master`. 
+
+
+
+
+
+
+
+
+
+
+
+
 
