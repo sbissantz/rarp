@@ -218,6 +218,8 @@
 | `git push <remote> --delete` | Delete all locally removed tag on `<remote>`, too   |
 | `git push <remote> --delete <tag>` | Delete the locally removed `<tag> `on `<remote>`, too   |
 | `git push <remote> --delete :refs/tags/<tag>` | Delete the locally removed `<tag> `on `<remote>`, too   |
+| | |
+| `git push --set-upstream <remote> <good_branch>` | Rename "bad_branch" to `<good_branch>` on `<remote>`, too (i.e., after doing `git branch --move <bad_branch> <good branch>`, and before doing `git push <remote> --delete <bad_branch>`) |
 
 ---
 
@@ -271,16 +273,40 @@
 
 ---
 
-# git show 
+# git branch 
 
 | Syntax | Description |
 | ------ | ----------- |
+| `git branch`| List local branches |
+| `git branch --all`| List local & remote tracking branches |
+| `git branch -v`| See all branches and their last commit |
+| | |
 | `git branch <branch>`| Create a new `branch` |
+| `git branch -d <branch>`| Delete `branch` |
+| `git branch --move <bad_branch> <good branch>`| Rename `<bad_branch>` to `<good_branch>` |
+| `git branch --move master main` | Rename `master` to `<main>` (i.e., before doing `git push --set-upstream <remote> main` and `git push <remote> --delete master`) |
+| | |
+| `git branch --merged`| List all branches that have merged into your current branch | 
+| `git branch --merged <branch>`| List all branches that have merged into `<branch>` yet |
+| `git branch --no-merged`| List all branches that have not merged into your current branch yet |
+| `git branch --merged <branch>`| List all branches that have merged into `<branch>` yet | 
 
+---
 
+# git merge
 
+| Syntax | Description |
+| ------ | ----------- |
+| `git merge <topic_branch>`| Merge `<topic_branch>` into the branch your currently on |
+| `git merge <topic_branch> <branch>`| Merge `<topic_branch>` into `<branch>` |
 
+---
 
+# git merge
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git mergetool` | Resolve a merge conflict graphically |
 
 ---
 
