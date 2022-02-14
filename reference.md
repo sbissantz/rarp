@@ -129,7 +129,7 @@
 | `git log` | Show each commit log |
 | `git log -<n>` | Show each of the last `<n>` commit logs  |
 | `git log -1` | Show the last commit log  |
-| `git log -1 HEAD` | Show the last commit log of the branch indicated by `HEAD` (i.e., the pointer to the current branch) |
+| `git log -1 HEAD` | Show the last commit log of the `current` branch (i.e.: indicated by `HEAD`) |
 | `git log -p` | Show the patch introduced with each commit (i.e., within-file differences) |
 | `git log -<n> -p` | Show the patch introduced in each commit for each of the last `<n>` commit logs |
 | `git log --stat` | Show the commit logs statistic (i.e., if a file changed; and if so the lines added/removed `++++/---`) |
@@ -207,19 +207,21 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git push` | Push local changes (from the current branch into the upstream branch -- remote/branch)  |
+| `git push` | Push local changes (from `current` into `upstream` branch -- i.e.: remote/branch)  |
 | `git push <remote> <branch>` | Push local changes from `<branch>` into `<remote>/<branch>`  |
 | `git push <remote> <local_branch>:<branch>` | Push the changes from `<local_branch>` into a differently named `<remote>/<branch>` |
 | | |
-| `git push --tags` | Push local tags (from the current branch into the upstream branch -- remote/branch)  |
+| `git push --tags` | Push local tags (from `current` into `upstream` branch -- i.e.: remote/branch)  |
 | `git push <remote> <tag>` | Push a local tag into `<remote>` |
 | `git push <remote> --tags` | Push all local tags (`refs/tags`) into `<remote>` |
 | | |
-| `git push <remote> --delete` | Delete all locally removed tag on `<remote>`, too   |
+| `git push <remote> --delete` | Delete all locally removed tags on `<remote>`, too (after a `git tag -d...`)   |
 | `git push <remote> --delete <tag>` | Delete the locally removed `<tag> `on `<remote>`, too   |
 | `git push <remote> --delete :refs/tags/<tag>` | Delete the locally removed `<tag> `on `<remote>`, too   |
 | | |
 | `git push --set-upstream <remote> <good_branch>` | Rename "bad_branch" to `<good_branch>` on `<remote>`, too (i.e., after doing `git branch --move <bad_branch> <good branch>`, and before doing `git push <remote> --delete <bad_branch>`) |
+| | |
+| `git push <remote> --delete <branch>` | Delete `<remote>/<branch>` |
 
 ---
 
@@ -231,6 +233,9 @@
 | `git checkout <branch>` | Checkout `<branch>` | 
 | `git checkout -b <branch>` | Create and checkout `<branch>` | 
 | `git checkout -b <branch> <tag>` | Checkout the versions of files `<tag>` is pointing to in `<branch>` |
+| | |
+| `git checkout --track <remote>/<branch>` | Create and checkout `<branch>` after setting it up to track `<remote>/<branch>` |
+| `git checkout -b <branch> <remote>/<branch>` | Create and checkout `<branch>` after setting it up to track `<remote>/<branch>` (Note: Helpful if `<branch>` and `<remote>/<branch>` are named differently) |
 
 ---
 
@@ -244,6 +249,9 @@
 | `git switch <branch>` | Checkout `<branch>` | 
 | `git switch -c <branch>` | Create and checkout `<branch>` | 
 | `git switch -c <branch> <tag>` | Checkout the versions of files `<tag>` is pointing to in `<branch>` |
+| | |
+| `git switch --track <remote>/<branch>` | Create and checkout `<branch>` after setting it up to track `<remote>/<branch>` |
+| `git switch -c <branch> <remote>/<branch>` | Create and checkout `<branch>` after setting it up to track `<remote>/<branch>` (Note: Helpful if `<branch>` and `<remote>/<branch>` are named differently) |
 
 ---
 
@@ -269,7 +277,15 @@
 | ------ | ----------- |
 | `git show <object>` | Shows info about `<object>` |
 | `git show <tag>` | Shows info about `<tag>` (i.e., SHA-1 hash; tagger name, email, date; tagging message; GPG signature) |
-| | |
+
+---
+
+# git ls-remote
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git ls-remote <remote>` | List all remote references |
+
 
 ---
 
@@ -281,15 +297,20 @@
 | `git branch --all`| List local & remote tracking branches |
 | `git branch -v`| See all branches and their last commit |
 | | |
+| `git branch -vv`| See which tracking branches are set up |
+| | |
 | `git branch <branch>`| Create a new `branch` |
 | `git branch -d <branch>`| Delete `branch` |
 | `git branch --move <bad_branch> <good branch>`| Rename `<bad_branch>` to `<good_branch>` |
 | `git branch --move master main` | Rename `master` to `<main>` (i.e., before doing `git push --set-upstream <remote> main` and `git push <remote> --delete master`) |
 | | |
-| `git branch --merged`| List all branches that have merged into your current branch | 
+| `git branch --merged`| List all branches that have merged into the `current` branch yet | 
 | `git branch --merged <branch>`| List all branches that have merged into `<branch>` yet |
-| `git branch --no-merged`| List all branches that have not merged into your current branch yet |
+| `git branch --no-merged`| List all branches that have not merged into the `current` branch yet |
 | `git branch --merged <branch>`| List all branches that have merged into `<branch>` yet | 
+| | |
+| `git branch -u <remote>/<branch>`| Set up `<branch>` to track `<remote>/<branch>` | 
+| `git branch -u <remote>/<branch> <branch>`| Set up `<branch>` to track `<remote>/<branch>` (Note: helpful if the branch and the remote branch are named differently) |
 
 ---
 
@@ -297,7 +318,7 @@
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git merge <topic_branch>`| Merge `<topic_branch>` into the branch your currently on |
+| `git merge <topic_branch>`| Merge `<topic_branch>` into the `current` branch (i.e.: indicated by `HEAD`) |
 | `git merge <topic_branch> <branch>`| Merge `<topic_branch>` into `<branch>` |
 
 ---
