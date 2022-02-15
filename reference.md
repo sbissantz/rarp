@@ -16,6 +16,12 @@
 | `git config --global core.editor <editor>"` | Make `<editor>` your global user's default text editor (`.gitconfig`) |
 | `git config --global init.defaultBranch <branch>"` | Make `<branch>` your global user's default initialization branch (`.gitconfig`) |
 | `git config --global alias.<alias> <command>"` | Set up an `<alias>` for a `<command>` (`.gitconfig`) |
+| `git config --global credential.helper cache`| Set up a credential helper/cache (i.e., remembers your password for a few minutes)|
+| `git config --global pull.rebase true`| Make rebasing the default pulling strategy |
+|  |  |
+| `git config --system` | Apply system wide changes (i.e., all users & each of their repositories) |
+| `git config --global` | Apply user wide changes (i.e., all repositories for a single user) |
+| `git config --local` | Apply repository wide changes (hierarchy: `system < global < local`) |
 
 ---
 
@@ -191,6 +197,7 @@
 | ------ | ----------- |
 | `git fetch` | Fetch all info (from the specified remote tracking branch, see: `fetch URL`) |
 | `git fetch <remote>` | Synchronize your localdb with `<remote>` |
+| `git fetch ; git rebase <remote>/<branch>` | Rebase on top of force-pushed rebase work on <remote>/<branch> (I.e.: if someone force pushes changes that overwrote your work -- tries to apply them on top!) |
 
 ---
 
@@ -200,6 +207,8 @@
 | ------ | ----------- |
 | `git pull` | Fetch & merge all info (from the specified remote tracking branch, see `fetch URL`)  |
 | `git pull <remote>` | Fetch all changes from `<remote>` and merge it into your localdb |
+| | |
+| `git pull --rebase <remote>/<branch>` | Rebase on top of force-pushed rebase work on <remote>/<branch> (I.e.: if someone force pushes changes that overwrote your work -- tries to apply them on top!) |
 
 ---
 
@@ -323,11 +332,21 @@
 
 ---
 
-# git merge
+# git mergetool
 
 | Syntax | Description |
 | ------ | ----------- |
 | `git mergetool` | Resolve a merge conflict graphically |
+
+---
+
+# git rebase
+
+| Syntax | Description |
+| ------ | ----------- |
+| `git rebase <base_branch>` | Rebase patches of `current` branch onto `<base_branch>` (Note: after doing a `git checkout current`) |
+| `git rebase <base_branch> <topic_branch>` | Rebase patches of `<topic_branch>c` onto `<base_branch>` |
+| `git rebase --onto <base_branch> <branch> <another_branch> <topic_branch>` | Rebase patches that are unique to `<topic_branch>` -- i.e., not in `<another_branch>` -- and rebase them onto `<base_branch>`. 
 
 ---
 
