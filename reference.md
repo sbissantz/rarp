@@ -7,9 +7,9 @@
 | Syntax | Description |
 | ------ | ----------- |
 | `git config <key>` | Show me the `<key>` configuration |
-| `git config --show-origin <key>` | Show me the location of the `<key>` configuration | 
+| `git config --show-origin <key>` | Show me in which file the `<key>` configuration lives | 
 | `git config --list` | Show me all configurations (in all config files) |
-| `git config --list --show-origin` | Show me all configurations & the files were they live |
+| `git config --list --show-origin` | Show me all configurations & the files where they live |
 |  |  |
 | `git config --global user.name "foo bar"` | Make `foo bar` my global user's id |
 | `git config --global user.email foo@bar.com` | Make `foo@bar.com` my global user's mail address |
@@ -25,8 +25,8 @@
 | `git config --global` | Apply user wide changes (i.e., `.gitconfig` -- affects all repositories for a single user) |
 | `git config --local` | Apply repository wide changes (i.e., `.git/config`  |
 
-Note: `system < global < local`. Which means, changes applied in a local
-`.git/config` overwrites the system-wide applied changes in `/etc/git`.
+Note: `system < global < local`. Which means, changes applied to a local
+`.git/config` overwrites the system-wide changes in `/etc/git`.
 
 ---
 
@@ -73,7 +73,7 @@ Note: `system < global < local`. Which means, changes applied in a local
 |  |  |
 | `git add <modified_file>` |  Stage the `<modified_file>` (i.e., add it to the index or the "staging area") |
 | `git add <file_1> <file_2>` | Stage the two *modified* files -- `<file_1>`, `<file_2>` |
-| `git add -i` |  Stage modified files interactively |
+| `git add -i` |  Stage all modified files interactively |
 | `git add .` |  Stage all modified files in my current directory |
 | `git add *` |  Stage all modified files in my working directory |
 | `git add *.c` |  Stage all modified files in my working directory starting with a `.c` |
@@ -84,13 +84,13 @@ Note: `system < global < local`. Which means, changes applied in a local
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git commit` | Commit all staged files (with a message from `core.editor`) |
-| `git commit -m <msg>` | Commit all stages files with `<msg>` |
-| `git commit --amend` | Amend my previous commit message (to a message from `core.editor`) |
-| `git commit --amend -m <msg>` | Amend my previous commit message to `<message>` |
+| `git commit` | Commit all my staged files (with a message from my `core.editor`) |
+| `git commit -m <msg>` | Commit all my staged files with `<msg>` |
+| `git commit --amend` | Amend my previous commit message (use a message from my `core.editor`) |
+| `git commit --amend -m <msg>` | Amend my previous commit message, use `<message>` instead |
 | | |
-| `git commit -a` | Stage & commit all modified files (with a message from `core.editor`) |
-| `git commit -a -m <msg>` | Stage & commit all modified files with `<msg>` |
+| `git commit -a` | Stage & commit all my modified files (with a message from `core.editor`) |
+| `git commit -a -m <msg>` | Stage & commit all my modified files with `<msg>` |
 
 ---
 
@@ -98,7 +98,7 @@ Note: `system < global < local`. Which means, changes applied in a local
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git clone <url>` | Clone the repo from `<url>` (i.e., into a working directory named like the last word in the `<url>` or the word before the `.git` prefix) |
+| `git clone <url>` | Clone a repo from `<url>` (..into a new working directory named like the last word in the `<url>` or the word before the `.git` prefix) |
 | `git clone <url> <dir/>` | Clone the repo from `<url>` into `<dir/>` |
 
 ---
@@ -119,11 +119,11 @@ Note: `system < global < local`. Which means, changes applied in a local
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git rm <file>` | Remove the unstaged `<file>` from my WD |
+| `git rm <file>` | Remove this unstaged `<file>` from my WD |
 | `git rm <pattern>` | Remove all unstaged files from my WD that match the `<pattern>` |
-| `git rm \*` | Remove all unstaged files from my WD 
-| `git rm -f <file>` | Remove the staged `<file>` from my WD |
-| `git rm --cached <file>` | Stop tracking the `<file>` (i.e., remove `<file>` from the staging area, but keep it in my WD | 
+| `git rm \*` | Remove all unstaged files from my WD |
+| `git rm -f <file>` | Remove this staged `<file>` from my WD |
+| `git rm --cached <file>` | Stop tracking this `<file>` (i.e., remove the `<file>` from the staging area, but keep it in my WD | 
 
 ---
 
@@ -144,7 +144,7 @@ Note: `system < global < local`. Which means, changes applied in a local
 | `git log -<n>` | Show me each of the last `<n>` commit logs  |
 | `git log -1` | Show me the last commit log  |
 | `git log -1 HEAD` | Show me the last commit log of the `current` branch (i.e.: indicated by `HEAD`) |
-| `git log -p` | Show me the patch introduced with each commit (i.e., within-file differences) |
+| `git log -p` | Show me the patch introduced with each commit (i.e., the within-file differences) |
 | `git log -<n> -p` | Show me the patch introduced in each commit for each of my last `<n>` commit logs |
 | `git log --stat` | Show me the commit-log statistic (i.e., if a file changed; and if so the lines added/removed `++++/---`) |
 | `git log --shortstat` | Show me a short commit-log statistic (i.e., only the changed/insertions/deletions line from the `--stat` command )
@@ -177,10 +177,10 @@ Note: `system < global < local`. Which means, changes applied in a local
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git reset HEAD <file>` | Unstage the staged `<file>` |
-| `git restore --staged <file>` | Unstage the staged `<file>` |
+| `git reset HEAD <file>` | Unstage this staged `<file>` |
+| `git restore --staged <file>` | Unstage this staged `<file>` |
 | | |
-| `git restore <file>` | Unmodify the modified `<file>` |
+| `git restore <file>` | Unmodify this modified `<file>` |
 
 ---
 
