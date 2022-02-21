@@ -30,8 +30,6 @@ Note: `system < global < local`. Which means, changes applied to a local
 
 ---
 
-TODO
-
 # git help
 
 | Syntax | Description |
@@ -105,6 +103,7 @@ TODO
 
 ---
 
+
 # git diff 
 
 | Syntax | Description |
@@ -114,9 +113,14 @@ TODO
 | `git diff --staged` | Show me all staged changes that will be part of my next commit |
 | `git diff --cached` | Show me all staged changes that will be part of my next commit |
 | `git diff --stat` | Give me a brief summary of all changes |
+| `git diff <commit>` | Show me all changes sind a given commit `<file>` |
+| `git diff <commit_1> <commit_2>` | Show me all changes between `<commit_1>` and `<commit_2>` |
+| `git diff <commit> <file>` | Show me all changes since a given `<commit>` to a given `<file>` |
+| `git diff <tag>` | Show me all changes since a `<tag>`-ed commit |
 
 ---
 
+# TODO
 # git rm
 
 | Syntax | Description |
