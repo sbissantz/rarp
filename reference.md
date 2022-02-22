@@ -120,7 +120,6 @@ Note: `system < global < local`. Which means, changes applied to a local
 
 ---
 
-# TODO
 # git rm
 
 | Syntax | Description |
@@ -141,6 +140,8 @@ Note: `system < global < local`. Which means, changes applied to a local
 | `git mv <file> </somedir/else/file>` | Move the `<file>` to `</somedir/else/file>` |
 
 ---
+
+# TODO
 
 # git log
 
