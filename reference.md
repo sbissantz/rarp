@@ -147,7 +147,7 @@ Note: `system < global < local`. Which means, changes applied to a local
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git log` | Show me each commit log |
+| `git log` | Show me all commit logs |
 | `git log -<n>` | Show me each of the last `<n>` commit logs  |
 | `git log -1` | Show me the last commit log  |
 | `git log -1 HEAD` | Show me the last commit log of the `current` branch (i.e.: indicated by `HEAD`) |
