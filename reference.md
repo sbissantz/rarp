@@ -103,7 +103,6 @@ Note: `system < global < local`. Which means, changes applied to a local
 
 ---
 
-
 # git diff 
 
 | Syntax | Description |
@@ -140,8 +139,6 @@ Note: `system < global < local`. Which means, changes applied to a local
 | `git mv <file> </somedir/else/file>` | Move the `<file>` to `</somedir/else/file>` |
 
 ---
-
-# TODO
 
 # git log
 
@@ -205,6 +202,8 @@ Note: `system < global < local`. Which means, changes applied to a local
 | `git remote remove <remote>` | Remove the `<remote>` |
 
 ---
+
+# TODO
 
 # git fetch
 
