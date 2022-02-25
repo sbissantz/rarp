@@ -246,7 +246,17 @@ Note: `system < global < local`. Which means, changes applied to a local
 | | |
 | `git push <remote> --delete <branch>` | Delete the `<remote>/<branch>` |
 
+
+git {{c1::push}} {{c1::--force}} -- Force to push all changes to a <remote>/<branch>
+
+git {{c1::push}} {{c1::<remote>}} {{c1::+<branch>}} -- Force to push changes to a particular <remote>/<branch>\(^*\)
+
+git {{c1::push}} remote {{c1::--delete}} {{c1::<branches>}} -- Delete a `<remote>/<branches>` 
+
+git {{c1::push}} remote {{c1::--delete}} {{c1::<tags>}} -- Delete remote `<tags>` 
+
 ---
+
 
 # git checkout 
 
@@ -377,6 +387,24 @@ config --global alias.<shorty> <command>. ` or adding `logical = log --color
 your git configuration file.
 
 ---
+
+## Snippets
+
+### Snippet 1
+
+Drop all your local changes and commits, fetch the latest histroy from the
+server & point your local master branch at it
+
+git {{c1::fetch}} {{c1::origin}} 
+git {{c1::reset}} {{c1::--hard}} {{c1::origin/master}}
+
+### Snippet 2
+
+Get totally up to date ahead and behind numbers
+git {{c1::fetch}} {{c1::--all}} ; git {{c1::branch}} {{c1::-vv}}
+
+
+
 
 
 
