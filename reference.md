@@ -203,8 +203,6 @@ Note: `system < global < local`. Which means, changes applied to a local
 
 ---
 
-# TODO
-
 # git fetch
 
 | Syntax | Description |
@@ -222,9 +220,11 @@ Note: `system < global < local`. Which means, changes applied to a local
 | `git pull` | Fetch & merge all info (from the specified remote tracking branch, see `fetch URL`)  |
 | `git pull <remote>` | Fetch all changes from `<remote>` and merge it into my localdb |
 | | |
-| `git pull --rebase <remote>/<branch>` | Rebase on top of force-pushed rebase work on <remote>/<branch> (I.e.: if someone force pushes changes that overwrote my work -- tries to apply it on top!) |
+| `git pull --rebase <remote>` | Fetch all changes from `<remote>` and rebase them on my localdb |
+| `git pull --rebase <remote>/<branch>` | Rebase on top of force-pushed rebased work on <remote>/<branch> (I.e.: if someone force pushes changes that overwrote my work -- tries to apply it on top!) |
 
 ---
+
 
 # git push 
 
@@ -243,20 +243,17 @@ Note: `system < global < local`. Which means, changes applied to a local
 | `git push <remote> --delete :refs/tags/<tag>` | Delete my locally removed `<tag> `on `<remote>`, too   |
 | | |
 | `git push --set-upstream <remote> <good_branch>` | Rename "bad_branch" to `<good_branch>` on `<remote>`, too (i.e., after doing `git branch --move <bad_branch> <good branch>`, and before doing `git push <remote> --delete <bad_branch>`) |
+| `git push -u <remote> <good_branch>` | Rename "bad_branch" to `<good_branch>` on `<remote>`, too (i.e., after doing `git branch --move <bad_branch> <good branch>`, and before doing `git push <remote> --delete <bad_branch>`) |
 | | |
+| `git push --force <remote>` | Force to push all changes into `<remote>` |
+| `git push <remote> +<branch>` | Force to push changes into a particular `<remote>/<branch>` |
+
 | `git push <remote> --delete <branch>` | Delete the `<remote>/<branch>` |
-
-
-git {{c1::push}} {{c1::--force}} -- Force to push all changes to a <remote>/<branch>
-
-git {{c1::push}} {{c1::<remote>}} {{c1::+<branch>}} -- Force to push changes to a particular <remote>/<branch>\(^*\)
-
-git {{c1::push}} remote {{c1::--delete}} {{c1::<branches>}} -- Delete a `<remote>/<branches>` 
-
-git {{c1::push}} remote {{c1::--delete}} {{c1::<tags>}} -- Delete remote `<tags>` 
+| `git push <remote> --delete <tags>` | Delete the `<remote>/<tags>` on remote |
 
 ---
 
+# TODO
 
 # git checkout 
 
@@ -403,8 +400,13 @@ git {{c1::reset}} {{c1::--hard}} {{c1::origin/master}}
 Get totally up to date ahead and behind numbers
 git {{c1::fetch}} {{c1::--all}} ; git {{c1::branch}} {{c1::-vv}}
 
+### Snippet 3
 
+Rename the master branch to main. Do this on remote, too (i.e. set main as new upstream branch)
 
+git {{c1::branch}} {{c1::--move}} {{c1::master}} {{c1::main}}
+
+git {{c1::push}} {{c1::--set-upstream}} {{c1::<remote>}} {{c1::<correct_branch>}}
 
 
 
