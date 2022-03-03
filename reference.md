@@ -373,6 +373,8 @@ Note: `system < global < local`. Which means, changes applied to a local
 
 # git mine
 
+Some shortcuts I find useful!
+
 | Syntax | Description |
 | ------ | ----------- |
 | `git unstage <file>` | `git reset -- HEAD <file>` |
@@ -380,6 +382,7 @@ Note: `system < global < local`. Which means, changes applied to a local
 | `git unmodify <file>` | `git restore <file>` |
 | `git last` | `git log -1 HEAD` | 
 | `git visual` | `!gitk` | Alias for a visual git interface | 
+| `git gui` | An alternative to `gitk` | 
 | `git logcial` | `git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit` | Alias for a log(ical) commit history output |
 
 You can add the `logical` alias to your `.gitconfig` using by either using `git
