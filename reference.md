@@ -253,8 +253,6 @@ Note: `system < global < local`. Which means, changes applied to a local
 
 ---
 
-# TODO
-
 # git checkout 
 
 | `git checkout -- <file>` | Unmodify the modified `<file>` |
@@ -275,9 +273,11 @@ Note: `system < global < local`. Which means, changes applied to a local
 | ------ | ----------- |
 | `git switch -`  | Switch back to my previous branch |
 | | |
-| `git switch <tag>` | Switch to the versions of the files `<tag>` is pointing to (Important: Puts you in the detached HEAD state)|
-| `git switch <branch>` | Switch to `<branch>` | 
-| `git switch -c <branch>` | Create & switch to `<branch>` | 
+| `git switch <branch>` | Checkout the `<branch>` | 
+| `git switch <tag>` | Checkout how my files looked like when they were `<tag>`ed (Important: Puts you in the detached HEAD state)|
+| `git switch <remote>/<branch>` | Check out how my `<remote><branch>` looked like (..the last time I communicated with it) | 
+| | |
+| `git switch -c <branch>` | Create a new `<branch>` and switch to it | 
 | `git switch -c <branch> <tag>` | Checkout the versions of files `<tag>` is pointing to in a new `<branch>` |
 | | |
 | `git switch --track <remote>/<branch>` | Create & switch to `<branch>` after setting it up to track `<remote>/<branch>` |
@@ -348,7 +348,7 @@ Note: `system < global < local`. Which means, changes applied to a local
 | Syntax | Description |
 | ------ | ----------- |
 | `git merge <topic_branch>`| Merge a `<topic_branch>` into my `current` branch (i.e.: indicated by `HEAD`) |
-| `git merge <topic_branch> <branch>`| Merge a `<topic_branch>` into `<branch>` |
+| `git merge <topic_branch> <base_branch>`| Merge a `<topic_branch>` into `<branch>` |
 
 ---
 
@@ -364,16 +364,21 @@ Note: `system < global < local`. Which means, changes applied to a local
 
 | Syntax | Description |
 | ------ | ----------- |
-| `git rebase <base_branch>` | Rebase patches of my `current` branch onto `<base_branch>` (Note: after doing a `git checkout current`) |
+| `git rebase <base_branch>` | Rebase patches of my `current` branch onto `<base_branch>` (Note: after doing a `git switch current`) |
 | `git rebase <base_branch> <topic_branch>` | Rebase patches of a `<topic_branch>c` onto the `<base_branch>` |
 | `git rebase --onto <base_branch> <branch> <another_branch> <topic_branch>` | Rebase patches that are unique to `<topic_branch>` -- i.e., not in `<another_branch>` -- and rebase them onto the `<base_branch>`. 
+| `git rebase <remote>/<branch>` | Rebase on top of force-pushed rebase work on <remote>/<branch> (i.e., if someone force pushes changes that overwrote your work -- tries to apply them on top!)
 
 ---
 
 # git mine
 
-| `git unstage <file>` | `git reset -- HEAD <file>` | Alias to unstage a staged `<file>` |
-| `git last` | `git log -1 HEAD` | Alias to view the last commit | 
+| Syntax | Description |
+| ------ | ----------- |
+| `git unstage <file>` | `git reset -- HEAD <file>` |
+| `git unstage <file>` | `git restore --staged <file>` |
+| `git unmodify <file>` | `git restore <file>` |
+| `git last` | `git log -1 HEAD` | 
 | `git visual` | `!gitk` | Alias for a visual git interface | 
 | `git logcial` | `git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit` | Alias for a log(ical) commit history output |
 
@@ -384,6 +389,8 @@ config --global alias.<shorty> <command>. ` or adding `logical = log --color
 your git configuration file.
 
 ---
+
+# TODO
 
 ## Snippets
 
