@@ -19,11 +19,14 @@
 | `git config --global credential.helper cache`| Make a `credential.helper` `cache` my password for a few minutes|
 | `git config --global pull.rebase true`| Make rebasing my default pulling strategy |
 |  |  |
+| `git config --global core.abbrev 7` | Make the length of SHA-1 Hash 7|
+|  |  |
 | `git config --global alias.<alias> <command>"` | Set up `<alias>` for `<command>` |
 |  |  |
 | `git config --system` | Apply system wide changes (i.e., `/etc/gitconfig` -- affects all users & each of their repositories -- ) |
 | `git config --global` | Apply user wide changes (i.e., `.gitconfig` -- affects all repositories for a single user) |
 | `git config --local` | Apply repository wide changes (i.e., `.git/config`  |
+
 
 Note: `system < global < local`. Which means, changes applied to a local
 `.git/config` overwrites the system-wide changes in `/etc/git`.
@@ -393,11 +396,95 @@ your git configuration file.
 
 ---
 
-# TODO
+## Workflows in Snippets
 
-## Snippets
+### Snippet: Set it up!
 
-### Snippet 1
+These two are mandatory!
+
+```
+git config --global user.name "Steven Marcel Bißantz" 
+git config --global user.email bissantz@uni-landau.de
+```
+
+### Snippet: Rising & Additionals!
+
+Those are nice to have!
+
+```
+git config --global credential.helper cache
+git config --global core.abbrev 7
+git config --global core.editor nvim
+git config --global pull.rebase true
+```
+
+### Snippet: Without? It doesn't work!
+
+```
+git init
+```
+
+If you want to be more specific!
+
+```
+git init <path/to/dir/>
+```
+
+### Snippet: Butter, Bread, ..and Chocolate!
+
+Butter and bread!
+
+```
+git status
+git add <files>
+git commit 
+```
+Chocolate! Note: Do you want to stage and commit *all* your patches at once?
+Use the following snippet. But be aware -- this can be desirable; it might not
+be! ..Like chocolate.
+
+```
+git status
+git commit -a
+```
+A compromise!
+
+```
+git status
+git commit -a
+```
+
+
+
+### Snippet: The origin of your Git-verse!
+
+```
+git remote add origin git@github.com:sbissantz/repo.git 
+git remote -v
+git push -u origin master
+```
+
+## Workflow 1: A-Z!
+
+```
+git init
+M-m-m-m-modify for files...
+git status
+git add <file> <file> <file>
+git commit
+
+git status
+git add <file> <file> <file>
+git commit
+
+git remote add origin git@github.com:sbissantz/repo.git 
+git remote -v
+git push -u origin master
+```
+
+
+
+### Snippet: Modification D-day!
 
 Drop all your local changes and commits, fetch the latest histroy from the
 server & point your local master branch at it
@@ -422,6 +509,13 @@ git {{c1::push}} {{c1::--set-upstream}} {{c1::<remote>}} {{c1::<correct_branch>}
 
 
 
+### Snippet: A-a-a-a-alias!
+
+You can add the `logical` alias to your `.gitconfig` using by either using `git
+config --global alias.<shorty> <command>. ` or adding `logical = log --color
+--graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)
+%C(bold blue)<%an>%Creset' --abbrev-commit` manually -- under `[alias]`-- to
+your git configuration file.
 
 
 
