@@ -466,9 +466,12 @@ git push -u origin master
 
 ## Workflow 1: A-Z!
 
+Create a repository, modify some files, do the initial commit, locate a remote
+repository and push!
+
 ```
 git init
-M-m-m-m-modify for files...
+M-m-m-m-modify files...
 git status
 git add <file> <file> <file>
 git commit
@@ -482,32 +485,59 @@ git remote -v
 git push -u origin master
 ```
 
-
-
 ### Snippet: Modification D-day!
 
-Drop all your local changes and commits, fetch the latest histroy from the
-server & point your local master branch at it
+Drop all your local changes and commits, fetch the latest history from the
+server and point your local master branch at it.
 
-git {{c1::fetch}} {{c1::origin}} 
-git {{c1::reset}} {{c1::--hard}} {{c1::origin/master}}
+```
+git fetch origin 
+git reset --hard origin/master
+```
 
-### Snippet 2
+### Snippet 2: Totally up-to-date
 
 Get totally up to date ahead and behind numbers
-git {{c1::fetch}} {{c1::--all}} ; git {{c1::branch}} {{c1::-vv}}
 
-### Snippet 3
+```
+git fetch --all 
+git branch -vv
+```
 
-Rename the master branch to main. Do this on remote, too (i.e. set main as new upstream branch)
+### Snippet: Rename branches -- locally & remotely 
 
-git {{c1::branch}} {{c1::--move}} {{c1::master}} {{c1::main}}
+Rename the master branch to main. Do this on remote, too (i.e. set main as new
+upstream branch). Therefore we rename the branch an define the new upstream branch
+(`origin/master`) explicitly. So we highlight fact that (`main`) is our new
+tracking branch. After that we can rely upon `git push` to bring our patches
+home (`origin`)
+safely.
 
-git {{c1::push}} {{c1::--set-upstream}} {{c1::<remote>}} {{c1::<correct_branch>}}
+```
+git branch --move master main
+git push --set-upstream origin main
+git push origin --delete master
+```
 
+## Snippet: Working with branches
 
+```
+git branch new_feature
+git switch new_feature
+M-m-m-m-modify files...
+git switch master 
+git merge new_feature
+git branch -d new feature
+```
+The quick-n-dirty version:
 
-
+```
+git switch -c new_feature
+M-m-m-m-modify files...
+git switch -
+git merge new_feature
+git branch -d new feature
+```
 
 ### Snippet: A-a-a-a-alias!
 
